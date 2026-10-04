@@ -18,7 +18,9 @@ npm run build
 npm run preview
 ```
 
-Deploy **the contents of `dist/`** to the static hosting target for `manojmathivanan.com`. This project does not change DNS, modify Trader, or configure a hosting provider. Keep `trader.manojmathivanan.com` pointing to its existing independent project. When connecting a host to this repo, use build command `npm run build` and output directory `dist`.
+The production homepage uses the existing DigitalOcean VPS and Caddy, alongside Trader. See [deployment instructions](deploy/README.md) for the independent source checkout, versioned static releases, HTTPS configuration, updates, and rollback.
+
+For another static host, deploy **the contents of `dist/`**, using build command `npm run build` and output directory `dist`. Keep `trader.manojmathivanan.com` pointing to its existing independent project.
 
 ## Update the resume
 

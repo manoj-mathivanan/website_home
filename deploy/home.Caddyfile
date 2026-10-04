@@ -1,0 +1,5 @@
+manojmathivanan.com {
+    root * /srv/home/current
+    encode zstd gzip
+    file_server
+}
