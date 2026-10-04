@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta
+      name="description"
+      content="Manoj Mathivanan — software architect working with distributed systems, messaging, and automation. Explore his experience, innovations, and projects."
+    />
+    <link rel="canonical" href="https://manojmathivanan.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Manoj Mathivanan — Software Architect</title>
+    <script>
+      try {
+        if (localStorage.getItem("manoj-theme") === "dark")
+          document.documentElement.dataset.theme = "dark";
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="wordmark" href="#" aria-label="Manoj Mathivanan, home"
+        >mm<span>.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Switch to dark theme"
+        aria-pressed="false"
+        title="Change color theme"
+      >
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="small-dot"></span> SOFTWARE ARCHITECT · CHENNAI, INDIA
+          </p>
+          <h1 id="hero-title">
+            Manoj<br />
+            Mathivanan<span class="accent">.</span>
+          </h1>
+          <p class="hero-intro">
+            I build systems that scale.<br /><span
+              >And small things that make life easier.</span
+            >
+          </p>
+          <p class="hero-description">
+            Distributed systems, messaging, and automation. My work spans
+            software architecture at PayPal, cloud frameworks at SAP, and
+            hands-on experiments with connected devices.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#experience"
+              >Explore my work <span aria-hidden="true">↓</span></a
+            ><button class="button secondary" id="print-resume">
+              Save resume <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="snapshot">Career snapshot · February 2024</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="diagram-top">
+            <span>THE WAY I THINK</span
+            ><span class="diagram-id">01 / SYSTEMS</span>
+          </div>
+          <div class="system-art">
+            <svg class="connections" viewBox="0 0 480 420">
+              <circle cx="240" cy="210" r="144" class="orbit" />
+              <circle cx="240" cy="210" r="83" class="orbit inner" />
+              <path
+                d="M100 105L240 210L380 112M240 210L115 318M240 210L362 317M240 210V53M240 210V370"
+                class="wires"
+              />
+              <path
+                d="M100 105L240 210L380 112M240 210L115 318M240 210L362 317"
+                class="pulses"
+              />
+            </svg>
+            <div class="system-core">
+              mm<span>.</span><small>BUILD · CONNECT · REFINE</small>
+            </div>
+            <div class="system-node node-top">&lt;/&gt;<small>code</small></div>
+            <div class="system-node node-left">{ }<small>design</small></div>
+            <div class="system-node node-right">⇄<small>stream</small></div>
+            <div class="system-node node-bottom-left">
+              ⌁<small>automate</small>
+            </div>
+            <div class="system-node node-bottom-right">
+              ↗<small>scale</small>
+            </div>
+            <div class="system-endpoint"></div>
+          </div>
+          <div class="diagram-bottom">
+            <span class="small-dot"></span
+            ><span>Curiosity is the starting point.</span>
+          </div>
+        </div>
+      </section>
+      <div class="focus-strip">
+        <span class="eyebrow">MY FOCUS</span><span>Distributed systems</span
+        ><span>Messaging & streaming</span><span>Automation</span
+        ><span>Connected devices</span>
+      </div>
+      <section
+        class="section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / THE JOURNEY</p>
+            <h2 id="experience-title">Built over time.</h2>
+          </div>
+          <p>
+            From testing software to architecting<br class="desktop-break" />
+            the systems behind it.
+          </p>
+        </div>
+        <div id="experience-list" class="experience-list"></div>
+        <noscript
+          ><p>
+            JavaScript enables the interactive career timeline. Manoj's February
+            2024 resume includes software architecture at PayPal (2021–2024
+            snapshot), development architecture at SAP Labs (2012–2021), and
+            quality engineering at Infosys (2011–2012). Contact:
+            <a href="mailto:ma.manoj@gmail.com">ma.manoj@gmail.com</a>.
+          </p></noscript
+        >
+      </section>
+      <section
+        class="section skills-section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / THE TOOLKIT</p>
+            <h2 id="skills-title">Ideas into working systems.</h2>
+          </div>
+          <p>
+            The technologies and practices<br class="desktop-break" />
+            I work with.
+          </p>
+        </div>
+        <div
+          id="skill-filters"
+          class="skill-filters"
+          role="group"
+          aria-label="Filter skills by category"
+        ></div>
+        <div
+          id="skills-list"
+          class="skills-list"
+          aria-live="polite"
+          aria-atomic="true"
+        ></div>
+      </section>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / OUTSIDE THE JOB DESCRIPTION</p>
+            <h2 id="projects-title">Always building something.</h2>
+          </div>
+          <p>
+            A live project, and a few explorations<br class="desktop-break" />
+            from my innovation notebook.
+          </p>
+        </div>
+        <a
+          class="featured-project"
+          href="https://trader.manojmathivanan.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div>
+            <p class="eyebrow">PROJECT / TRADER</p>
+            <h3>Trader<span aria-hidden="true">↗</span></h3>
+            <p>My project on the web.</p>
+            <span class="project-domain">trader.manojmathivanan.com</span>
+          </div>
+          <div class="trader-art" aria-hidden="true">
+            <svg viewBox="0 0 360 180">
+              <path
+                class="chart-grid"
+                d="M0 30H360M0 75H360M0 120H360M0 165H360M45 0V180M120 0V180M195 0V180M270 0V180M345 0V180"
+              />
+              <path
+                class="chart-area"
+                d="M0 150L35 126L66 138L104 88L135 104L171 60L201 77L240 40L275 55L320 16L360 30V180H0Z"
+              />
+              <path
+                class="chart-line"
+                d="M0 150L35 126L66 138L104 88L135 104L171 60L201 77L240 40L275 55L320 16L360 30"
+              /></svg
+            ><span>TRADER / PERSONAL PROJECT</span>
+          </div></a
+        >
+        <div id="innovations-list" class="innovations-grid"></div>
+      </section>
+      <section
+        class="section recognition-section"
+        aria-labelledby="recognition-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / ALONG THE WAY</p>
+            <h2 id="recognition-title">Recognition & contribution.</h2>
+          </div>
+        </div>
+        <div id="recognition-list" class="recognition-grid"></div>
+      </section>
+      <section
+        class="section education-section"
+        aria-labelledby="education-title"
+      >
+        <div>
+          <p class="eyebrow">05 / FOUNDATIONS</p>
+          <h2 id="education-title">
+            Still a student<br />
+            of what's possible.
+          </h2>
+          <p class="interests">
+            Beyond software: gadgets, meetups,<br />
+            biking, and travelling.
+          </p>
+        </div>
+        <div id="education-list" class="education-list"></div>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 id="contact-title">
+          Good things start<br />
+          with a conversation<span>.</span>
+        </h2>
+        <a class="email-link" href="mailto:ma.manoj@gmail.com"
+          >ma.manoj@gmail.com <span aria-hidden="true">↗</span></a
+        >
+        <div class="contact-actions">
+          <button id="copy-email" class="text-button">
+            Copy email <span aria-hidden="true">⧉</span></button
+          ><a
+            href="https://github.com/manoj-mathivanan"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <p id="copy-status" role="status" class="copy-status"></p>
+      </section>
+    </main>
+    <footer>
+      <a class="wordmark" href="#" aria-label="Back to top">mm<span>.</span></a>
+      <p>
+        Manoj Mathivanan <span class="footer-separator">/</span> Chennai, India
+      </p>
+      <a href="#main">Back to top ↑</a>
+      <p class="print-only">
+        Career details from February 2024 · manojmathivanan.com
+      </p>
+    </footer>
+  </body>
+</html>
