@@ -24,7 +24,6 @@ On the existing VPS, clone the public repository and create the release director
 git clone https://github.com/manoj-mathivanan/website_home.git /opt/home
 mkdir -p /srv/home/releases
 sh /opt/home/deploy/publish.sh
-systemctl restart home-chat.service
 cp /opt/home/deploy/home.Caddyfile /etc/caddy/home.Caddyfile
 ```
 
@@ -37,6 +36,7 @@ After committing and pushing source changes to GitHub:
 ```sh
 git -C /opt/home pull --ff-only origin main
 sh /opt/home/deploy/publish.sh
+systemctl restart home-chat.service
 ```
 
 The script publishes only tracked public site files from that exact commit, then switches the active release atomically. It does not expose `.git`, documentation, scripts, or the original resume. No Caddy reload is needed for content updates. Check the homepage, its JavaScript and stylesheet, and Trader's existing endpoint after publishing.
