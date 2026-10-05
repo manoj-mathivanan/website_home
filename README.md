@@ -40,7 +40,9 @@ The initial career content is sourced from `../Manoj_Resume_Feb2024.docx`. The P
 - Save resume opens browser printing; choose **Save as PDF**. All career entries and skills are included, and previous browsing state is restored afterward.
 - Responsive layout, visible keyboard focus, skip link, reduced-motion support, and print styling.
 
-Google Fonts enhance typography when available; system sans-serif fallbacks keep the site usable without them. No analytics, cookies, or backend are included.
+Google Fonts enhance typography when available; system sans-serif fallbacks keep the site usable without them. The resume chatbot uses a private Python/SQLite backend and an anonymous HttpOnly session cookie. Visitors consent before their first message is saved and can optionally leave contact details. It answers from published resume/project facts, without a model API or model charges. Historical career details remain explicitly dated.
+
+Run `npm run chat` in a second terminal for local chat support, and `npm run test:chat` for backend tests. Build regenerates `chat/knowledge.json` from `src/resume.js`; edit `scripts/build-knowledge.mjs` to add public project descriptions. Chat history, email credentials, and backups are never included in `dist/` or the public release.
 
 ## Repository boundaries
 

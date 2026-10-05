@@ -19,6 +19,8 @@
       } catch {}
     </script>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/chat.js"></script>
+    <link rel="stylesheet" href="/src/chat.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -273,5 +275,132 @@
         Career details from February 2024 · manojmathivanan.com
       </p>
     </footer>
+    <button
+      class="chat-launcher"
+      id="chat-open"
+      aria-haspopup="dialog"
+      aria-controls="resume-chat"
+    >
+      <span aria-hidden="true">✦</span> Ask about Manoj
+    </button>
+    <dialog id="resume-chat" class="chat-dialog" aria-labelledby="chat-title">
+      <div class="chat-header">
+        <div class="chat-avatar" aria-hidden="true">mm.</div>
+        <div>
+          <h2 id="chat-title">Ask about Manoj</h2>
+          <p>Experience, ideas & projects</p>
+        </div>
+        <button
+          type="button"
+          class="chat-icon-button"
+          id="chat-close"
+          aria-label="Close chat"
+        >
+          ×
+        </button>
+      </div>
+      <div class="chat-scroll" id="chat-scroll">
+        <p class="chat-intro">
+          Explore Manoj’s career and projects. Answers come from his published
+          details, including his February 2024 resume.
+        </p>
+        <div class="chat-prompts" id="chat-prompts">
+          <button
+            type="button"
+            data-question="Tell me about Manoj's experience"
+          >
+            His experience ↗</button
+          ><button
+            type="button"
+            data-question="Tell me about the Trader project"
+          >
+            Trader project ↗</button
+          ><button type="button" data-question="What are Manoj's skills?">
+            Skills & technologies ↗
+          </button>
+        </div>
+        <div
+          id="chat-messages"
+          role="log"
+          aria-live="polite"
+          aria-label="Conversation"
+        ></div>
+        <details class="chat-contact" id="chat-contact">
+          <summary>
+            Leave your details for Manoj <span aria-hidden="true">↗</span>
+          </summary>
+          <p>
+            Optional. Leave an email or phone number so Manoj can follow up.
+          </p>
+          <form id="chat-contact-form">
+            <label
+              >Name <span>(optional)</span
+              ><input name="name" autocomplete="name" maxlength="100" /></label
+            ><label
+              >Email <span>(optional if you leave a phone number)</span
+              ><input
+                type="email"
+                name="email"
+                autocomplete="email"
+                maxlength="254" /></label
+            ><label
+              >Phone <span>(optional if you leave an email)</span
+              ><input
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+                maxlength="40" /></label
+            ><label
+              >What would you like to discuss? <span>(optional)</span
+              ><textarea
+                name="note"
+                rows="2"
+                maxlength="1000"
+              ></textarea></label
+            ><label class="chat-consent"
+              ><input type="checkbox" name="consent" required /><span
+                >I agree to share these details with Manoj so he can contact
+                me.</span
+              ></label
+            ><button type="submit" class="button primary">
+              Send contact details
+            </button>
+            <p id="chat-contact-status" role="status"></p>
+          </form>
+        </details>
+      </div>
+      <div class="chat-composer">
+        <form id="chat-message-form">
+          <label class="chat-consent" id="chat-consent-label"
+            ><input type="checkbox" id="chat-consent" required /><span
+              >I agree to save this chat and share it with Manoj. Messages and
+              contact details are kept for
+              <span id="chat-retention">90</span> days; backups may retain them
+              for 7 additional days. Please don’t include sensitive
+              information.</span
+            ></label
+          ><label class="sr-only" for="chat-question"
+            >Your question about Manoj</label
+          >
+          <div class="chat-input-row">
+            <textarea
+              id="chat-question"
+              placeholder="Ask about his work or projects…"
+              maxlength="1200"
+              rows="2"
+              required
+            ></textarea
+            ><button type="submit" id="chat-send" aria-label="Send message">
+              ↑
+            </button>
+          </div>
+          <p class="chat-error" id="chat-error" role="status"></p>
+        </form>
+        <div class="chat-bottom">
+          <span>Answers from published facts</span
+          ><button type="button" id="chat-new">New conversation</button>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

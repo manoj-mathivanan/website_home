@@ -1,6 +1,7 @@
 import { cp, mkdir, rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
+import './build-knowledge.mjs';
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const output = resolve(root, "dist");

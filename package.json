@@ -8,7 +8,9 @@
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/serve.mjs --dist",
-    "check": "node --check src/resume.js && node --check src/main.js && node --check scripts/build.mjs && node --check scripts/serve.mjs"
+    "check": "node --check src/resume.js && node --check src/main.js && node --check src/chat.js && node --check scripts/build.mjs && node --check scripts/serve.mjs",
+    "chat": "python chat/server.py",
+    "test:chat": "python -m unittest discover -s chat -p test_*.py"
   },
   "engines": {
     "node": ">=20"

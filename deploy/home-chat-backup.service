@@ -1,0 +1,14 @@
+[Unit]
+Description=Backup private resume conversation database
+
+[Service]
+Type=oneshot
+User=home-chat
+Group=home-chat
+EnvironmentFile=/etc/home-chat.env
+ExecStart=/usr/bin/python3 /opt/home/chat/admin.py backup
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/home-chat

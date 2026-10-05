@@ -1,0 +1,131 @@
+{
+  "snapshot": "February 2024",
+  "facts": [
+    {
+      "id": "profile",
+      "title": "About Manoj",
+      "text": "Manoj Mathivanan is a software architect based in Chennai, India. His work focuses on distributed systems, messaging and streaming, automation, and connected devices. Career information is a February 2024 snapshot; his present employer, availability, and employment status have not been confirmed.",
+      "keywords": "about who background introduce summary manoj mathivanan location based chennai current now present employer availability",
+      "url": "/#main"
+    },
+    {
+      "id": "career-0",
+      "title": "PayPal experience",
+      "text": "MTS 2 · Lead Software Architect at PayPal. February 2021 – ongoing as of the February 2024 resume. Scalable messaging and streaming for PayPal products. Technical lead for a highly scalable messaging and streaming platform serving PayPal products. Transformed deployment and maintenance using containers and Ansible playbooks. Designed and developed disaster recovery for the messaging platform, increasing availability to 99.99%. These facts come from the February 2024 resume.",
+      "keywords": "PayPal MTS 2 · Lead Software Architect Distributed systems Messaging Disaster recovery experience work career job employment current latest availability",
+      "url": "/#experience"
+    },
+    {
+      "id": "career-1",
+      "title": "SAP Labs experience",
+      "text": "Associate Development Architect at SAP Labs. March 2012 – February 2021. Cloud frameworks, data services, and developer tools. Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol. Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding. Created a framework for end-to-end REST service testing with record and playback support. Shared knowledge with the developer community through talks and workshops at SAP Tech Hub. In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes. These facts come from the February 2024 resume.",
+      "keywords": "SAP Labs Associate Development Architect Java OData Developer frameworks Performance experience work career job employment ",
+      "url": "/#experience"
+    },
+    {
+      "id": "career-2",
+      "title": "Infosys experience",
+      "text": "Quality Engineer at Infosys. June 2011 – March 2012. A foundation in software quality and banking applications. Wrote comprehensive tests and tested the BIC teller application for Citizens Bank. These facts come from the February 2024 resume.",
+      "keywords": "Infosys Quality Engineer Quality engineering Application testing experience work career job employment ",
+      "url": "/#experience"
+    },
+    {
+      "id": "skills",
+      "title": "Skills",
+      "text": "The February 2024 resume lists: Kafka, Messaging & streaming, Google Cloud Platform, Software architecture, Java, Spring Boot, Tomcat, Jetty, Agile planning & execution, Docker, Ansible, Puppet, Shell scripting, Git, Jenkins, Maven, Raspberry Pi, Arduino. It does not list proficiency scores or confirm skills acquired since then.",
+      "keywords": "skill skills technology technologies toolkit tech stack programming language languages java kafka cloud docker ansible",
+      "url": "/#skills"
+    },
+    {
+      "id": "education-0",
+      "title": "M.Tech · Software Systems",
+      "text": "M.Tech · Software Systems, Birla Institute of Technology, Pilani, 2017. Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
+      "keywords": "education degree studied university college school qualification Birla Institute of Technology, Pilani M.Tech · Software Systems Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
+      "url": "/#education-title"
+    },
+    {
+      "id": "education-1",
+      "title": "B.Tech · Computer Science",
+      "text": "B.Tech · Computer Science, Amrita University, Coimbatore, 2011. Built a video-mining tool that extracts frames, recognizes text with OCR, and tags videos to make their contents searchable.",
+      "keywords": "education degree studied university college school qualification Amrita University, Coimbatore B.Tech · Computer Science Built a video-mining tool that extracts frames, recognizes text with OCR, and tags videos to make their contents searchable.",
+      "url": "/#education-title"
+    },
+    {
+      "id": "recognition-0",
+      "title": "3 Catalyst awards",
+      "text": "Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
+      "keywords": "award awards achievement recognition accomplishment contribution 3 Catalyst awards Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "recognition-1",
+      "title": "Building beyond the brief",
+      "text": "Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
+      "keywords": "award awards achievement recognition accomplishment contribution Building beyond the brief Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "recognition-2",
+      "title": "Technology with a purpose",
+      "text": "One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
+      "keywords": "award awards achievement recognition accomplishment contribution Technology with a purpose One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "recognition-3",
+      "title": "Ideas become shared work",
+      "text": "Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
+      "keywords": "award awards achievement recognition accomplishment contribution Ideas become shared work Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "innovation-0",
+      "title": "Everyday objects, new possibilities.",
+      "text": "Explorations with a smart water bottle, a GPS-following drone, and a helmet with navigation, music, and call handling. These are explorations described in the February 2024 resume; their current status is not confirmed.",
+      "keywords": "project projects innovation innovations experiment CONNECTED DEVICES Explorations with a smart water bottle, a GPS-following drone, and a helmet with navigation, music, and call handling. IoT Prototyping",
+      "url": "/#projects"
+    },
+    {
+      "id": "innovation-1",
+      "title": "A home with a little more intelligence.",
+      "text": "Intelligent home automation using Raspberry Pi, alongside talks and workshops to help others start building. These are explorations described in the February 2024 resume; their current status is not confirmed.",
+      "keywords": "project projects innovation innovations experiment AUTOMATION Intelligent home automation using Raspberry Pi, alongside talks and workshops to help others start building. Raspberry Pi Workshops",
+      "url": "/#projects"
+    },
+    {
+      "id": "innovation-2",
+      "title": "Following an idea through.",
+      "text": "Predicting the next request with machine learning, and founding a startup exploring revenue through free Wi-Fi. These are explorations described in the February 2024 resume; their current status is not confirmed.",
+      "keywords": "project projects innovation innovations experiment EXPERIMENTS Predicting the next request with machine learning, and founding a startup exploring revenue through free Wi-Fi. Machine learning Entrepreneurship",
+      "url": "/#projects"
+    },
+    {
+      "id": "trader",
+      "title": "Trader project",
+      "text": "Trader is Manoj’s software project at https://trader.manojmathivanan.com. Its published project notes describe market research, backtesting, and paper-trading workflows, with a Python web application. It is hosted on a DigitalOcean VPS with Caddy HTTPS. This chatbot cannot inspect account data, execute trades, or provide investment recommendations.",
+      "keywords": "trader trading project projects backtest backtesting research paper python hosting digitalocean caddy",
+      "url": "https://trader.manojmathivanan.com"
+    },
+    {
+      "id": "homepage",
+      "title": "Personal homepage",
+      "text": "The interactive resume at https://manojmathivanan.com is built with HTML, CSS, and JavaScript. It has an expandable career timeline, skills by category, selected innovations, light and dark themes, and a printable resume. Its independent repository is https://github.com/manoj-mathivanan/website_home. It shares the existing VPS with Trader while keeping its own source, static files, and deployment.",
+      "keywords": "website homepage home resume portfolio github repository hosting domain html css javascript",
+      "url": "https://github.com/manoj-mathivanan/website_home"
+    },
+    {
+      "id": "contact",
+      "title": "Contact Manoj",
+      "text": "Manoj’s published email is ma.manoj@gmail.com and his GitHub profile is https://github.com/manoj-mathivanan. Visitors can optionally leave a name and email or phone number using this chat’s contact form. That requests follow-up; it does not promise a reply or an appointment. No phone number or exact residential address for Manoj is published here.",
+      "keywords": "contact reach email connect hire hiring opportunity recruitment recruiter collaborate collaboration meeting phone address",
+      "url": "/#contact"
+    },
+    {
+      "id": "interests",
+      "title": "Interests",
+      "text": "The February 2024 resume mentions trying new technologies and gadgets, automating everyday tasks, attending meetups and conferences, biking, and travelling.",
+      "keywords": "interest interests hobby hobbies passion bike biking travelling travel gadget gadgets meetup",
+      "url": "/#education-title"
+    }
+  ]
+}

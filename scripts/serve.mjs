@@ -1,4 +1,4 @@
-import { createServer } from "node:http";
+import { createServer, request as proxyRequest } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { resolve, extname, relative, isAbsolute } from "node:path";
@@ -15,6 +15,38 @@ const types = {
 };
 const server = createServer(async (request, response) => {
   try {
+    if (request.url.startsWith("/api/chat/")) {
+      const upstream = proxyRequest(
+        {
+          hostname: "127.0.0.1",
+          port: 8766,
+          path: request.url,
+          method: request.method,
+          headers: {
+            ...request.headers,
+            "x-home-client-ip": request.socket.remoteAddress,
+          },
+          timeout: 15000,
+        },
+        (result) => {
+          response.writeHead(result.statusCode, result.headers);
+          result.pipe(response);
+        },
+      );
+      upstream.on("timeout", () => upstream.destroy());
+      upstream.on("error", () => {
+        if (!response.headersSent)
+          response.writeHead(503, { "Content-Type": "application/json" });
+        response.end(
+          JSON.stringify({
+            error:
+              "Chat is temporarily unavailable. Please try again or email Manoj.",
+          }),
+        );
+      });
+      request.pipe(upstream);
+      return;
+    }
     if (!["GET", "HEAD"].includes(request.method)) {
       response.writeHead(405, { Allow: "GET, HEAD" });
       response.end();
