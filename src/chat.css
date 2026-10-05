@@ -175,7 +175,7 @@
   font-size: 0.875rem;
   margin: 12px 0;
 }
-.chat-contact form > label:not(.chat-consent) {
+.chat-contact form > label {
   display: block;
   margin: 12px 0;
   font-size: 0.875rem;
@@ -212,21 +212,11 @@
   flex-shrink: 0;
   background: var(--paper);
 }
-.chat-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
+.chat-notice {
   font-size: 0.75rem;
   line-height: 1.5;
   color: var(--muted);
   margin: 0 0 12px;
-}
-.chat-consent input {
-  margin-top: 3px;
-  width: 16px;
-  height: 16px;
-  accent-color: var(--accent);
-  flex-shrink: 0;
 }
 .chat-input-row {
   display: flex;

@@ -352,17 +352,13 @@
                 maxlength="40" /></label
             ><label
               >What would you like to discuss? <span>(optional)</span
-              ><textarea
-                name="note"
-                rows="2"
-                maxlength="1000"
-              ></textarea></label
-            ><label class="chat-consent"
-              ><input type="checkbox" name="consent" required /><span
-                >I agree to share these details with Manoj so he can contact
-                me.</span
-              ></label
-            ><button type="submit" class="button primary">
+              ><textarea name="note" rows="2" maxlength="1000"></textarea>
+            </label>
+            <p class="chat-notice">
+              Sending these details shares them with Manoj so he can contact
+              you.
+            </p>
+            <button type="submit" class="button primary">
               Send contact details
             </button>
             <p id="chat-contact-status" role="status"></p>
@@ -371,15 +367,13 @@
       </div>
       <div class="chat-composer">
         <form id="chat-message-form">
-          <label class="chat-consent" id="chat-consent-label"
-            ><input type="checkbox" id="chat-consent" required /><span
-              >I agree to save this chat and share it with Manoj. Messages and
-              contact details are kept for
-              <span id="chat-retention">90</span> days; backups may retain them
-              for 7 additional days. Please don’t include sensitive
-              information.</span
-            ></label
-          ><label class="sr-only" for="chat-question"
+          <p class="chat-notice" id="chat-storage-notice">
+            Chats are saved and shared with Manoj. Messages and contact details
+            are kept for
+            <span id="chat-retention">90</span> days; backups may retain them
+            for 7 additional days. Please don’t include sensitive information.
+          </p>
+          <label class="sr-only" for="chat-question"
             >Your question about Manoj</label
           >
           <div class="chat-input-row">

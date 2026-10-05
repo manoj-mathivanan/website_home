@@ -3,8 +3,7 @@ const question = document.querySelector("#chat-question");
 const messageForm = document.querySelector("#chat-message-form");
 const contactForm = document.querySelector("#chat-contact-form");
 const messages = document.querySelector("#chat-messages");
-const consent = document.querySelector("#chat-consent");
-const consentLabel = document.querySelector("#chat-consent-label");
+const storageNotice = document.querySelector("#chat-storage-notice");
 const error = document.querySelector("#chat-error");
 const scroll = document.querySelector("#chat-scroll");
 let started = false;
@@ -75,8 +74,7 @@ function addMessage(who, text, sources = []) {
 }
 
 function state() {
-  consentLabel.hidden = started;
-  consent.required = !started;
+  storageNotice.hidden = started;
   document.querySelector("#chat-send").disabled = busy;
   document.querySelector("#chat-new").disabled = busy;
   messageForm.setAttribute("aria-busy", String(busy));
@@ -101,13 +99,11 @@ document.querySelector("#chat-open").addEventListener("click", async () => {
     started = history.messages.length > 0;
     if (history.contact_saved) {
       contactForm.hidden = true;
-      document
-        .querySelector("#chat-contact")
-        .append(
-          Object.assign(document.createElement("p"), {
-            textContent: "Your contact details have been saved for Manoj.",
-          }),
-        );
+      document.querySelector("#chat-contact").append(
+        Object.assign(document.createElement("p"), {
+          textContent: "Your contact details have been saved for Manoj.",
+        }),
+      );
     }
     initialized = true;
   } catch {
@@ -148,10 +144,6 @@ messageForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const text = question.value.trim();
   if (busy || !text) return;
-  if (!started && !consent.checked) {
-    consent.focus();
-    return;
-  }
   busy = true;
   error.textContent = "";
   state();
@@ -190,7 +182,7 @@ contactForm.addEventListener("submit", async (event) => {
   status.textContent = "";
   try {
     const values = Object.fromEntries(new FormData(contactForm));
-    await api("contact", { ...values, consent: values.consent === "on" });
+    await api("contact", { ...values, consent: true });
     contactForm.querySelectorAll("input,textarea").forEach((input) => {
       input.disabled = true;
     });
@@ -207,7 +199,6 @@ document.querySelector("#chat-new").addEventListener("click", async () => {
   try {
     await api("new", {});
     started = false;
-    consent.checked = false;
     pending = undefined;
     messages.replaceChildren();
     question.value = "";
