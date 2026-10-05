@@ -223,7 +223,7 @@ class App:
         text += '\n\nHistory is stored privately on your server. Use the owner export command described in deploy/README.md.\n'
         if os.getenv('RESEND_API_KEY'):
             data = json.dumps({'from': sender, 'to': [recipient], 'subject': subject, 'text': text}).encode()
-            request = Request('https://api.resend.com/emails', data=data, headers={'Authorization': 'Bearer ' + os.environ['RESEND_API_KEY'], 'Content-Type': 'application/json', 'Idempotency-Key': 'home-chat-' + row['id']}, method='POST')
+            request = Request('https://api.resend.com/emails', data=data, headers={'Authorization': 'Bearer ' + os.environ['RESEND_API_KEY'], 'Content-Type': 'application/json', 'User-Agent': 'ManojHomeChat/1.0', 'Idempotency-Key': 'home-chat-' + row['id']}, method='POST')
             with urlopen(request, timeout=15) as response:
                 result = json.load(response)
                 if not result.get('id'):
