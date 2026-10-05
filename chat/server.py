@@ -214,7 +214,8 @@ class App:
         recipient = os.getenv('CHAT_NOTIFY_TO', 'ma.manoj@gmail.com')
         sender = os.environ['CHAT_EMAIL_FROM']
         payload = json.loads(row['payload'])
-        subject = 'New resume conversation' if row['kind'] == 'started' else 'Resume visitor requested follow-up'
+        title = 'New resume conversation' if row['kind'] == 'started' else 'Resume visitor requested follow-up'
+        subject = f"{title} [{row['conversation'][:8]}]"
         text = f"{subject} at manojmathivanan.com\nConversation: {row['conversation']}\n\n"
         if row['kind'] == 'started':
             text += 'First question:\n' + payload['first_question']
