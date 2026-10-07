@@ -11,3 +11,4 @@ __pycache__/
 *.pyc
 *.sqlite3*
 chat/config.env
+chat/llm.config.env

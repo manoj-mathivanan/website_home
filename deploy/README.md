@@ -1,6 +1,6 @@
 # Homepage deployment
 
-This homepage shares the existing DigitalOcean `manoj-projects` VPS with Trader. Caddy serves the resume directly and proxies only `/api/chat/*` to a small Python service on loopback port 8766. No additional hosting subscription or model API is required.
+This homepage shares the existing DigitalOcean `manoj-projects` VPS with Trader. Caddy serves the resume directly and proxies only `/api/chat/*` to a small Python service on loopback port 8766. No additional hosting subscription is required. The optional LLM engine has separate API usage charges when enabled.
 
 ## Infrastructure
 
@@ -71,7 +71,28 @@ Install the updated homepage Caddy fragment, validate the main configuration, an
 
 Each first message creates one private conversation and a durable notification. Retries with the same request ID do not duplicate messages or notifications. Optional contact details create a separate follow-up notification. When sender configuration is missing or delivery fails, email stays queued for retry. Resend supports idempotent delivery; SMTP has a small possibility of duplicates if the process stops after sending but before saving delivery confirmation.
 
-History lives in `/var/lib/home-chat/conversations.sqlite3`, owned by the isolated `home-chat` system user. There is no public history/admin endpoint; anonymous cookies can access only their own transcript. Origins, request sizes, session signatures, and request rates are checked. Stored network rate-limit identifiers are hashed. Answers quote trusted public facts and decline unsupported requests; this is a deterministic facts assistant, not a general-purpose generative model.
+History lives in `/var/lib/home-chat/conversations.sqlite3`, owned by the isolated `home-chat` system user. There is no public history/admin endpoint; anonymous cookies can access only their own transcript. Origins, request sizes, session signatures, and request rates are checked. Stored network rate-limit identifiers are hashed. With the LLM disabled, answers quote public facts. With it enabled, answers are generated from those facts and recent context, with source IDs validated by the server. Model grounding is not a guarantee of factual accuracy; review answers after changing models or content.
+
+## Optional LLM engine
+
+The adapter calls the OpenAI Responses API using `gpt-4.1-mini-2025-04-14` by default. It sends all 18 approved facts and at most four preceding question/answer pairs from the same conversation. There are no tools, browsing, embeddings, or access to other conversations. Contact-form details, cookies, IP identifiers, and email credentials are excluded. Email addresses and obvious phone numbers inside chat messages are redacted as a best effort; visitors should still avoid sensitive text. API responses use `store:false`; that setting does not remove all provider-side operational retention.
+
+Set these fields in the private `/etc/home-chat.env`, preserving every existing mail setting:
+
+```ini
+OPENAI_API_KEY=<private project API key>
+OPENAI_MODEL=gpt-4.1-mini-2025-04-14
+CHAT_LLM_ENABLED=true
+CHAT_LLM_DAILY_LIMIT=30
+```
+
+For secure local handoff, copy `chat/llm.config.env.example` to ignored `chat/llm.config.env`. Transfer it over SSH and merge only its four named fields into the existing server environment. Do not replace the mail configuration. Remove the local key copy after transfer. Keys should be scoped to a dedicated website project and Responses write permission where available. Enable API billing in your own OpenAI account; do not use ChatGPT session credentials.
+
+The daily limit caps attempted paid calls across all visitors over a rolling 24 hours, including timeouts. It is a call limit, not a dollar budget. Responses are limited to 600 output tokens; input is bounded by the approved facts, a 1,200-character question, and four bounded prior exchanges. Set provider billing controls separately. API failure, invalid output, incomplete responses, or an exhausted daily allowance use the facts fallback without an automatic second paid attempt. `CHAT_LLM_ENABLED=false` disables API calls immediately after service restart.
+
+Requests reserve a message and quota in a short SQLite transaction, then release the database lock before calling the provider. Retries reuse the stored answer or report that it is still processing. If a process restart leaves a pending request, a retry after 30 seconds recovers it using the facts fallback. A schema migration adds answer-engine metadata while preserving existing messages and contacts.
+
+Restart `home-chat.service` and check `/api/chat/status` for `mode: llm` and the selected model. Verify a real answer is stored with `engine=llm`; a working HTTP response alone can be the fallback. Before declaring activation complete, test experience calculations against the February 2024 cutoff, follow-up questions, unrelated requests, and attempts to override the scope. `npm run test:chat` exercises the transport and safety controls with mocked API responses, not real model behavior.
 
 ## Read history and contacts
 

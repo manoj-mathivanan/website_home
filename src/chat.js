@@ -92,6 +92,7 @@ document.querySelector("#chat-open").addEventListener("click", async () => {
     ]);
     document.querySelector("#chat-retention").textContent =
       status.retention_days;
+    document.querySelector("#chat-ai-notice").hidden = status.mode !== "llm";
     for (const item of history.messages) {
       addMessage("visitor", item.question);
       addMessage("assistant", item.answer, item.sources);
@@ -158,6 +159,12 @@ messageForm.addEventListener("submit", async (event) => {
     });
     addMessage("visitor", text);
     addMessage("assistant", result.text, result.sources);
+    if (
+      result.engine === "facts" &&
+      !document.querySelector("#chat-ai-notice").hidden
+    )
+      error.textContent =
+        "AI is temporarily unavailable or its daily limit has been reached. This answer uses published passages.";
     started = true;
     pending = undefined;
     question.value = "";

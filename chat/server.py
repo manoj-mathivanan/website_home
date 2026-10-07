@@ -19,6 +19,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.request import Request, urlopen
 from assistant import answer
+import llm
 
 LOG = logging.getLogger('home-chat')
 SCHEMA = '''
@@ -28,7 +29,7 @@ CREATE TABLE IF NOT EXISTS conversations (
 CREATE TABLE IF NOT EXISTS messages (
  id INTEGER PRIMARY KEY, conversation TEXT NOT NULL REFERENCES conversations(id) ON DELETE CASCADE,
  request_id TEXT NOT NULL, question TEXT NOT NULL, answer TEXT, sources TEXT,
- created REAL NOT NULL, UNIQUE(conversation,request_id));
+ created REAL NOT NULL, engine TEXT, UNIQUE(conversation,request_id));
 CREATE TABLE IF NOT EXISTS outbox (
  id TEXT PRIMARY KEY, conversation TEXT NOT NULL REFERENCES conversations(id) ON DELETE CASCADE,
  kind TEXT NOT NULL, payload TEXT NOT NULL, created REAL NOT NULL, sent REAL,
@@ -62,6 +63,8 @@ class App:
         with self.db() as db:
             db.execute('PRAGMA journal_mode=WAL')
             db.executescript(SCHEMA)
+            if 'engine' not in {row['name'] for row in db.execute('PRAGMA table_info(messages)')}:
+                db.execute('ALTER TABLE messages ADD COLUMN engine TEXT')
         if os.name != 'nt':
             self.path.chmod(0o600)
         self.cleanup()
@@ -125,7 +128,7 @@ class App:
         if not session or session.get('anonymous'):
             return {'messages': [], 'contact_saved': False}
         with self.db() as db:
-            messages = db.execute('SELECT question,answer,sources FROM messages WHERE conversation=? ORDER BY id', (session['id'],)).fetchall()
+            messages = db.execute('SELECT question,answer,sources FROM messages WHERE conversation=? AND answer IS NOT NULL ORDER BY id', (session['id'],)).fetchall()
         return {'messages': [{'question': row['question'], 'answer': row['answer'], 'sources': json.loads(row['sources'] or '[]')} for row in messages], 'contact_saved': bool(session['contact'])}
 
     def message(self, body, session, ip):
@@ -155,7 +158,14 @@ class App:
                 if existing:
                     if existing['question'] != question:
                         raise Problem(409, 'This request identifier has already been used.')
-                    return {'text': existing['answer'], 'sources': json.loads(existing['sources'])}, None
+                    if existing['answer'] is None:
+                        if existing['created'] > time.time() - 30:
+                            raise Problem(409, 'Your answer is still processing. Please retry shortly.')
+                        # Recover a request interrupted by a restart without another paid call.
+                        recovered = answer(question)
+                        db.execute("UPDATE messages SET answer=?,sources=?,engine='facts' WHERE id=?", (recovered['text'], json.dumps(recovered['sources']), existing['id']))
+                        return {**recovered, 'engine': 'facts'}, None
+                    return {'text': existing['answer'], 'sources': json.loads(existing['sources']), 'engine': existing['engine'] or 'facts'}, None
             self.rate(db, self.ip_key(ip), 'message', 20, 60)
             self.rate(db, 'global', 'message', 1000, 86400)
             if not current:
@@ -167,10 +177,30 @@ class App:
             ident = session['id']
             if db.execute('SELECT COUNT(*) FROM messages WHERE conversation=?', (ident,)).fetchone()[0] >= 60:
                 raise Problem(429, 'This conversation has reached its limit. Start a new conversation later or email Manoj.')
-            prior = db.execute('SELECT question FROM messages WHERE conversation=? ORDER BY id DESC LIMIT 1', (ident,)).fetchone()
-            result = answer(question, prior['question'] if prior else '')
-            db.execute('INSERT INTO messages(conversation,request_id,question,answer,sources,created) VALUES(?,?,?,?,?,?)', (ident, request_id, question, result['text'], json.dumps(result['sources']), time.time()))
+            pending = db.execute('SELECT 1 FROM messages WHERE conversation=? AND answer IS NULL AND created>?', (ident, time.time()-30)).fetchone()
+            if pending:
+                raise Problem(409, 'Please wait for your previous answer before sending another question.')
+            history = [dict(row) for row in db.execute('SELECT question,answer FROM messages WHERE conversation=? AND answer IS NOT NULL ORDER BY id DESC LIMIT 4', (ident,))][::-1]
+            use_llm = False
+            if llm.enabled():
+                cap = max(0, min(1000, int(os.getenv('CHAT_LLM_DAILY_LIMIT', '30'))))
+                count = db.execute("SELECT COUNT(*) FROM rate_events WHERE key='global' AND kind='llm' AND created>?", (time.time()-86400,)).fetchone()[0]
+                if count < cap:
+                    db.execute('INSERT INTO rate_events VALUES(?,?,?)', ('global', 'llm', time.time()))
+                    use_llm = True
+            db.execute('INSERT INTO messages(conversation,request_id,question,created) VALUES(?,?,?,?)', (ident, request_id, question, time.time()))
             db.execute('UPDATE conversations SET updated=? WHERE id=?', (time.time(), ident))
+        # Network requests must not hold SQLite's write lock or block email delivery.
+        result = None
+        if use_llm:
+            try:
+                result = llm.generate(question, history)
+            except Exception as error:
+                LOG.warning('LLM unavailable; using facts fallback (%s)', type(error).__name__)
+        if result is None:
+            result = {**answer(question, history[-1]['question'] if history else ''), 'engine': 'facts'}
+        with self.db() as db:
+            db.execute('UPDATE messages SET answer=?,sources=?,engine=? WHERE conversation=? AND request_id=? AND answer IS NULL', (result['text'], json.dumps(result['sources']), result['engine'], ident, request_id))
         return result, session_cookie
 
     def queue(self, db, ident, kind, payload):
@@ -296,7 +326,7 @@ def make_handler(app):
 
         def do_GET(self):
             if self.path == '/api/chat/status':
-                self.respond(200, {'ready': True, 'mode': 'verified-facts', 'notifications_ready': app.mail_ready(), 'retention_days': app.retention})
+                self.respond(200, {'ready': True, 'mode': 'llm' if llm.enabled() else 'verified-facts', 'model': os.getenv('OPENAI_MODEL', llm.DEFAULT_MODEL) if llm.enabled() else None, 'notifications_ready': app.mail_ready(), 'retention_days': app.retention})
             elif self.path == '/api/chat/session':
                 session = app.session(self.headers.get('Cookie'))
                 self.respond(200, app.transcript(session), None if session else app.fresh_cookie())

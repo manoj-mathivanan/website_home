@@ -12,11 +12,14 @@ from server import App, Problem, serve
 
 class ChatTests(unittest.TestCase):
     def setUp(self):
+        self.mode = patch('server.llm.enabled', return_value=False)
+        self.mode.start()
         self.temp = tempfile.TemporaryDirectory()
         self.app = App(self.temp.name)
         self.cookie = self.app.fresh_cookie().split(';')[0]
 
     def tearDown(self):
+        self.mode.stop()
         self.temp.cleanup()
 
     def ask(self, question='What skills does Manoj have?', request_id=None, cookie=None, consent=True):
@@ -119,3 +122,41 @@ class ChatTests(unittest.TestCase):
             connection.close()
             server.shutdown()
             server.server_close()
+
+    def test_llm_cap_fallback_and_retry_do_not_repeat_paid_call(self):
+        result = {'text': 'Trader is Manoj’s project.', 'sources': [], 'engine': 'llm'}
+        request = str(uuid.uuid4())
+        with patch('server.llm.enabled', return_value=True), patch.dict('os.environ', {'CHAT_LLM_DAILY_LIMIT': '1'}), patch('server.llm.generate', return_value=result) as generate:
+            self.assertEqual(self.ask('Trader', request_id=request)['engine'], 'llm')
+            self.assertEqual(self.ask('Trader', request_id=request)['engine'], 'llm')
+            self.assertEqual(self.ask('PayPal')['engine'], 'facts')
+            self.assertEqual(generate.call_count, 1)
+        self.assertEqual(self.count('outbox'), 1)
+        with patch('server.llm.enabled', return_value=True), patch('server.llm.generate', side_effect=TimeoutError):
+            self.assertEqual(self.ask('Skills')['engine'], 'facts')
+
+    def test_llm_call_releases_database_lock_and_uses_own_history(self):
+        self.ask('PayPal')
+        def generate(question, history):
+            self.assertEqual(history[0]['question'], 'PayPal')
+            self.assertNotIn('contact', history[0])
+            # A different connection can write while the provider is answering.
+            with self.app.db() as db:
+                db.execute('INSERT INTO rate_events VALUES(?,?,?)', ('test','parallel',time.time()))
+            return {'text':'His experience is a February 2024 snapshot.', 'sources':[], 'engine':'llm'}
+        with patch('server.llm.enabled', return_value=True), patch('server.llm.generate', side_effect=generate):
+            self.assertEqual(self.ask('How much experience?')['engine'], 'llm')
+
+    def test_interrupted_pending_request_recovers_without_paid_call(self):
+        self.ask()
+        ident = self.app.session(self.cookie)['id']
+        request = str(uuid.uuid4())
+        with self.app.db() as db:
+            db.execute('INSERT INTO messages(conversation,request_id,question,created) VALUES(?,?,?,?)', (ident,request,'Trader',time.time()))
+        with self.assertRaises(Problem):
+            self.ask('Trader', request_id=request)
+        with self.app.db() as db:
+            db.execute('UPDATE messages SET created=? WHERE request_id=?', (time.time()-40, request))
+        with patch('server.llm.generate') as generate:
+            self.assertEqual(self.ask('Trader',request_id=request)['engine'],'facts')
+            generate.assert_not_called()
