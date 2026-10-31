@@ -1,11 +1,11 @@
-import { resume } from "../src/resume.js";
+import { resume, projects } from "../src/resume.js";
 import { writeFile } from "node:fs/promises";
 
 const facts = [
   {
     id: "profile",
     title: "About Manoj",
-    text: "Manoj Mathivanan is a software architect based in Chennai, India. His work focuses on distributed systems, messaging and streaming, automation, and connected devices. Career information is a February 2024 snapshot; his present employer, availability, and employment status have not been confirmed.",
+    text: "Manoj Mathivanan is a software architect based in Chennai, India. His work focuses on distributed systems, messaging and streaming, automation, and connected devices. Career information is documented through October 2026, with Staff Software Engineer recorded in the 2025 PayPal review. Do not infer employment or availability beyond the documented cutoff.",
     keywords:
       "about who background introduce summary manoj mathivanan location based chennai current now present employer availability",
     url: "/#main",
@@ -13,18 +13,30 @@ const facts = [
   ...resume.experience.map((job, i) => ({
     id: `career-${i}`,
     title: `${job.company} experience`,
-    text: `${job.role} at ${job.company}. ${job.note}. ${job.summary} ${job.details.join(" ")} These facts come from the February 2024 resume.`,
+    text: `${job.role} at ${job.company}. ${job.note}. ${job.summary} ${job.details.join(" ")} These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.`,
     keywords: `${job.company} ${job.role} ${job.tags.join(" ")} experience work career job employment ${i === 0 ? "current latest availability" : ""}`,
     url: "/#experience",
   })),
   {
     id: "skills",
     title: "Skills",
-    text: `The February 2024 resume lists: ${resume.skills.map((s) => s.name).join(", ")}. It does not list proficiency scores or confirm skills acquired since then.`,
+    text: `The published career material lists: ${resume.skills.map((s) => s.name).join(", ")}. No proficiency scores are assigned.`,
     keywords:
       "skill skills technology technologies toolkit tech stack programming language languages java kafka cloud docker ansible",
     url: "/#skills",
   },
+  ...resume.highlights.map((item, i) => ({
+    id: `impact-${i}`, title: item.title,
+    text: `${item.year}: ${item.value}. ${item.text}`,
+    keywords: `impact achievement kafka paypal ${item.title} ${item.text}`,
+    url: "/#impact",
+  })),
+  ...projects.map((item, i) => ({
+    id: `project-${i}`, title: item.title,
+    text: `${item.description} ${item.links.map(link => `${link.label}: ${link.url}`).join(". ")}`,
+    keywords: `project repository source demo ${item.title} ${item.description}`,
+    url: "/#projects",
+  })),
   ...resume.education.map((item, i) => ({
     id: `education-${i}`,
     title: item.degree,
@@ -57,7 +69,7 @@ const facts = [
   {
     id: "homepage",
     title: "Personal homepage",
-    text: "The interactive resume at https://manojmathivanan.com is built with HTML, CSS, and JavaScript. It has an expandable career timeline, skills by category, selected innovations, light and dark themes, and a printable resume. Its independent repository is https://github.com/manoj-mathivanan/website_home. It shares the existing VPS with Trader while keeping its own source, static files, and deployment.",
+    text: "The interactive resume at https://manojmathivanan.com is built with HTML, CSS, and JavaScript. It has an expandable career timeline, skills by category, selected innovations, light and dark themes, and a dedicated one-page resume at /resume/ with a downloadable PDF. Its independent repository is https://github.com/manoj-mathivanan/website_home. It shares the existing VPS with Trader while keeping its own source, static files, and deployment.",
     keywords:
       "website homepage home resume portfolio github repository hosting domain html css javascript",
     url: "https://github.com/manoj-mathivanan/website_home",

@@ -29,7 +29,9 @@ For another static host, deploy **the contents of `dist/`**, using build command
 - `src/styles.css`: design, mobile layouts, dark theme, print layout, reduced motion.
 - `public/favicon.svg`: personal monogram.
 
-The initial career content is sourced from `../Manoj_Resume_Feb2024.docx`. The PayPal role was ongoing **as of February 2024**, not verified as current. The source document is deliberately outside the public site. The homepage does not publish the phone number, street/postal details, or expired visa information. Project descriptions summarize the original resume; they do not imply the prototypes are live services.
+Career content combines the February 2024 resume, earlier resumes, and the owner's 2021–2026 impact summaries. The cutoff is October 2026; the Staff Software Engineer title is documented in the 2025 review. See [content notes](content-notes.md) for claim provenance, conflicting dates, and metric qualifications. Private source documents are excluded from Git and public releases.
+
+The dedicated resume is `/resume/`, with a real one-page PDF at `/downloads/Manoj-Mathivanan-Resume.pdf`. Both use `onePage` in `src/resume.js`. After editing that content, run `npm run resume:pdf` (Python with reportlab and pypdf required; `RESUME_PYTHON` can select the interpreter), then `npm run build`. The build regenerates the static resume HTML and chatbot knowledge. Visually inspect the regenerated PDF before publishing. The source resumes, phone number, residential address, and expired visa details are not published.
 
 ## Features
 
@@ -37,7 +39,7 @@ The initial career content is sourced from `../Manoj_Resume_Feb2024.docx`. The P
 - Skill category filters with accessible pressed state.
 - Light/dark theme saved on the visitor's device.
 - Email link, clipboard copy with a failure message, GitHub and Trader links.
-- Save resume opens browser printing; choose **Save as PDF**. All career entries and skills are included, and previous browsing state is restored afterward.
+- One-page resume page with an accessible PDF download; the homepage retains full career detail and project links.
 - Responsive layout, visible keyboard focus, skip link, reduced-motion support, and print styling.
 
 Google Fonts enhance typography when available; system sans-serif fallbacks keep the site usable without them. The resume chatbot uses a private Python/SQLite backend and an anonymous HttpOnly session cookie. A brief notice explains storage; sending a message starts the chat without an agreement checkbox. Visitors can optionally send contact details for follow-up. It answers from published resume/project facts, with an optional OpenAI LLM engine and a deterministic fallback. Historical career details remain explicitly dated.

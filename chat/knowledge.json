@@ -1,40 +1,152 @@
 {
-  "snapshot": "February 2024",
+  "snapshot": "October 2026",
   "facts": [
     {
       "id": "profile",
       "title": "About Manoj",
-      "text": "Manoj Mathivanan is a software architect based in Chennai, India. His work focuses on distributed systems, messaging and streaming, automation, and connected devices. Career information is a February 2024 snapshot; his present employer, availability, and employment status have not been confirmed.",
+      "text": "Manoj Mathivanan is a software architect based in Chennai, India. His work focuses on distributed systems, messaging and streaming, automation, and connected devices. Career information is documented through October 2026, with Staff Software Engineer recorded in the 2025 PayPal review. Do not infer employment or availability beyond the documented cutoff.",
       "keywords": "about who background introduce summary manoj mathivanan location based chennai current now present employer availability",
       "url": "/#main"
     },
     {
       "id": "career-0",
       "title": "PayPal experience",
-      "text": "MTS 2 · Lead Software Architect at PayPal. February 2021 – ongoing as of the February 2024 resume. Scalable messaging and streaming for PayPal products. Technical lead for a highly scalable messaging and streaming platform serving PayPal products. Transformed deployment and maintenance using containers and Ansible playbooks. Designed and developed disaster recovery for the messaging platform, increasing availability to 99.99%. These facts come from the February 2024 resume.",
-      "keywords": "PayPal MTS 2 · Lead Software Architect Distributed systems Messaging Disaster recovery experience work career job employment current latest availability",
+      "text": "Staff Software Engineer · Kafka Platform at PayPal. February 2021 – documented through October 2026; Staff title recorded in the 2025 review. Technical leadership across Kafka architecture, cloud modernization, reliability, and AI-assisted operations. 2026: Architected and delivered production Kafka on GKE using Strimzi, Helm, and Harness. Defined clusters, topics, ACLs, and configuration as code, with validation, rollback, and audit trails. Cut provisioning from about three days to under 15 minutes. 2026: Designed and built an autoscaling SNI-routing gateway with one entry IP per GKE cluster and end-to-end mTLS; designed highly available discovery and co-authored a cloud migration strategy accepted by the Cloud Architecture Forum. 2026: Built and tested automatic client re-bootstrap for cluster moves without application restarts. Producer switching took about 1–2 seconds and consumer switching 5–10 seconds in tests, with no message loss in three scenarios. Client rollout remained pending in October 2026. 2025–2026: Designed and deployed the Kafka MCP server, then extended its tools and integrated Slack-based troubleshooting. Estimated data collection and analysis fell from at least two hours to under two minutes; the 2026 bot handled 10 customer issues and 50+ internal queries. 2024–2025: Led the redesign and deployment of MirrorMaker 2 from VM-based replication to a Kubernetes-based platform; integrated authentication, observability, management UIs, and secure production-to-sandbox mirroring. 2024: Led a phased SASL security rollout with no user impact reported in the review, and completed migration of Kafka observability from SignalFx to Datadog using Micrometer. 2025: Contributed an Apache Kafka performance-testing fix for large payload files (KAFKA-18115, PR #18391), merged into the upstream project in May 2025. 2023: Rebuilt the Kafka QA platform with Terraform, Ansible, Docker, and Puppet. Reduced monthly infrastructure cost from about $39,000 to $4,000 and cluster installation from hours to five minutes, with production-aligned test environments. 2021–2022: Led Kafka infrastructure and disaster-recovery setup for the China payments environment; built partition-aware failover automation, cross-region metadata synchronization, and container-aware patching. Migrated the cluster metadata repository without downtime or data loss. 2025–2026: Automated fleet upgrades and change workflows, mentored engineers, led design reviews and sprint planning, and covered interim team management in 2025. In 2026, planned and groomed 351 stories for five engineers; about 80% were closed at the summary date. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
+      "keywords": "PayPal Staff Software Engineer · Kafka Platform Kafka GKE Platform architecture MCP Technical leadership experience work career job employment current latest availability",
       "url": "/#experience"
     },
     {
       "id": "career-1",
       "title": "SAP Labs experience",
-      "text": "Associate Development Architect at SAP Labs. March 2012 – February 2021. Cloud frameworks, data services, and developer tools. Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol. Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding. Created a framework for end-to-end REST service testing with record and playback support. Shared knowledge with the developer community through talks and workshops at SAP Tech Hub. In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes. These facts come from the February 2024 resume.",
+      "text": "Associate Development Architect at SAP Labs. March 2012 – February 2021. Cloud frameworks, data services, and developer tools. Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol. Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding. Built a multi-tenant enterprise backend-as-a-service application using Java, Node.js, and SAP UI5 to provision databases, deploy models, and expose REST services with minimal application code. Created a framework for end-to-end REST service testing with record and playback support. Shared knowledge with the developer community through talks and workshops at SAP Tech Hub. In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
       "keywords": "SAP Labs Associate Development Architect Java OData Developer frameworks Performance experience work career job employment ",
       "url": "/#experience"
     },
     {
       "id": "career-2",
       "title": "Infosys experience",
-      "text": "Quality Engineer at Infosys. June 2011 – March 2012. A foundation in software quality and banking applications. Wrote comprehensive tests and tested the BIC teller application for Citizens Bank. These facts come from the February 2024 resume.",
+      "text": "Quality Engineer at Infosys. June 2011 – March 2012. A foundation in software quality and banking applications. Wrote comprehensive tests and tested the BIC teller application for Citizens Bank. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
       "keywords": "Infosys Quality Engineer Quality engineering Application testing experience work career job employment ",
       "url": "/#experience"
     },
     {
       "id": "skills",
       "title": "Skills",
-      "text": "The February 2024 resume lists: Kafka, Messaging & streaming, Google Cloud Platform, Software architecture, Java, Spring Boot, Tomcat, Jetty, Agile planning & execution, Docker, Ansible, Puppet, Shell scripting, Git, Jenkins, Maven, Raspberry Pi, Arduino. It does not list proficiency scores or confirm skills acquired since then.",
+      "text": "The published career material lists: Kubernetes / GKE, Strimzi, MirrorMaker 2 / Kafka Connect, mTLS / SASL, MCP & AI tooling, Python, Node.js / REST / OData, Terraform, Helm / Harness CI/CD, Datadog / OpenTelemetry, Kafka, Messaging & streaming, Google Cloud Platform, Software architecture, Java, Spring Boot, Tomcat, Jetty, Agile planning & execution, Docker, Ansible, Puppet, Shell scripting, Git, Jenkins, Maven, Raspberry Pi, Arduino. No proficiency scores are assigned.",
       "keywords": "skill skills technology technologies toolkit tech stack programming language languages java kafka cloud docker ansible",
       "url": "/#skills"
+    },
+    {
+      "id": "impact-0",
+      "title": "Kafka as infrastructure as code",
+      "text": "2026: 3 days → <15 min. Architected production Kafka on GKE with Strimzi, Helm, and Harness CI/CD, replacing manual provisioning with a reviewed, automated deployment pipeline.",
+      "keywords": "impact achievement kafka paypal Kafka as infrastructure as code Architected production Kafka on GKE with Strimzi, Helm, and Harness CI/CD, replacing manual provisioning with a reviewed, automated deployment pipeline.",
+      "url": "/#impact"
+    },
+    {
+      "id": "impact-1",
+      "title": "Lower cloud infrastructure cost",
+      "text": "2023: ~$35k / month. Redesigned the Kafka QA platform and benchmarked VM configurations, reducing monthly cost from about $39,000 to $4,000 and cluster installation from hours to five minutes.",
+      "keywords": "impact achievement kafka paypal Lower cloud infrastructure cost Redesigned the Kafka QA platform and benchmarked VM configurations, reducing monthly cost from about $39,000 to $4,000 and cluster installation from hours to five minutes.",
+      "url": "/#impact"
+    },
+    {
+      "id": "impact-2",
+      "title": "AI-assisted Kafka operations",
+      "text": "2025–2026: 2 hours → <2 min. Built a Kafka MCP server and extended it into Slack-based troubleshooting. Estimated issue data collection and analysis time; not an average measured across incidents.",
+      "keywords": "impact achievement kafka paypal AI-assisted Kafka operations Built a Kafka MCP server and extended it into Slack-based troubleshooting. Estimated issue data collection and analysis time; not an average measured across incidents.",
+      "url": "/#impact"
+    },
+    {
+      "id": "impact-3",
+      "title": "Scalable cloud connectivity",
+      "text": "2026: 1 gateway IP. Designed an autoscaling SNI-routing gateway per GKE cluster, replacing per-broker IP exposure while preserving end-to-end mTLS. Designed highly available cluster discovery.",
+      "keywords": "impact achievement kafka paypal Scalable cloud connectivity Designed an autoscaling SNI-routing gateway per GKE cluster, replacing per-broker IP exposure while preserving end-to-end mTLS. Designed highly available cluster discovery.",
+      "url": "/#impact"
+    },
+    {
+      "id": "impact-4",
+      "title": "Modernized Kafka replication",
+      "text": "2024–2025: VMs → containers. Led the redesign and deployment of MirrorMaker 2 on a Kubernetes-based platform, with secure cross-environment replication, monitoring, and UI-based management.",
+      "keywords": "impact achievement kafka paypal Modernized Kafka replication Led the redesign and deployment of MirrorMaker 2 on a Kubernetes-based platform, with secure cross-environment replication, monitoring, and UI-based management.",
+      "url": "/#impact"
+    },
+    {
+      "id": "impact-5",
+      "title": "Kafka cluster switching",
+      "text": "2026 · BUILT & TESTED: Zero-restart design. Built and tested client re-bootstrap: producers switched in about 1–2 seconds and consumers in 5–10 seconds with no message loss in three test scenarios. Client rollout had not started in the October summary.",
+      "keywords": "impact achievement kafka paypal Kafka cluster switching Built and tested client re-bootstrap: producers switched in about 1–2 seconds and consumers in 5–10 seconds with no message loss in three test scenarios. Client rollout had not started in the October summary.",
+      "url": "/#impact"
+    },
+    {
+      "id": "project-0",
+      "title": "Apache Kafka contribution",
+      "text": "Fixed large-payload file loading in Kafka's producer performance tool, avoiding NegativeArraySizeException during load tests. The fix was merged into the upstream project. Merged contribution: https://github.com/apache/kafka/pull/18391",
+      "keywords": "project repository source demo Apache Kafka contribution Fixed large-payload file loading in Kafka's producer performance tool, avoiding NegativeArraySizeException during load tests. The fix was merged into the upstream project.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-1",
+      "title": "Trader",
+      "text": "Python research, backtesting, and paper-trading workflows with frozen experiment inputs and persistent paper portfolios. Open project: https://trader.manojmathivanan.com. Source: https://github.com/manoj-mathivanan/trader_all",
+      "keywords": "project repository source demo Trader Python research, backtesting, and paper-trading workflows with frozen experiment inputs and persistent paper portfolios.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-2",
+      "title": "Kafka bootstrap diagnostics",
+      "text": "Java / Spring Boot HTTP request-inspection service for bootstrap diagnostics. A development prototype; broker forwarding is listed as future work in its README. Source: https://github.com/manoj-mathivanan/kafka-bootstrap-proxy",
+      "keywords": "project repository source demo Kafka bootstrap diagnostics Java / Spring Boot HTTP request-inspection service for bootstrap diagnostics. A development prototype; broker forwarding is listed as future work in its README.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-3",
+      "title": "Warehouse robot",
+      "text": "Raspberry Pi warehouse automation prototype that receives an order and location from an app, retrieves the item, and brings it to a dispatch point. Source: https://github.com/manoj-mathivanan/warehouse-robot. Watch demo: https://youtu.be/aI32BWp6zB4",
+      "keywords": "project repository source demo Warehouse robot Raspberry Pi warehouse automation prototype that receives an order and location from an app, retrieves the item, and brings it to a dispatch point.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-4",
+      "title": "Smart water bottle",
+      "text": "Raspberry Pi proof of concept that tracks water consumption, sends drinking reminders, and motivates teams with a leaderboard. Smart Bottle and Smart Health Index placed second at SAP's IoT Chef hackathon. ",
+      "keywords": "project repository source demo Smart water bottle Raspberry Pi proof of concept that tracks water consumption, sends drinking reminders, and motivates teams with a leaderboard. Smart Bottle and Smart Health Index placed second at SAP's IoT Chef hackathon.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-5",
+      "title": "Smart helmet",
+      "text": "Prototype combining two-way Bluetooth audio with an Android app for navigation, music, and call handling through voice interaction. Source: https://github.com/manoj-mathivanan/smart-helmet",
+      "keywords": "project repository source demo Smart helmet Prototype combining two-way Bluetooth audio with an Android app for navigation, music, and call handling through voice interaction.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-6",
+      "title": "Home automation & Raspberry Pi",
+      "text": "Mobile-controlled switches, power monitoring, and experiments with Raspberry Pi and ESP8266. Demos include wireless home automation and an Android-controlled remote car. Raspberry Pi source: https://github.com/manoj-mathivanan/RaspberryPi. ESP8266 source: https://github.com/manoj-mathivanan/ESP8266. Home automation demo: https://youtu.be/WkdBBF2dDrw. Remote car demo: https://youtu.be/HdcvcBxZMno",
+      "keywords": "project repository source demo Home automation & Raspberry Pi Mobile-controlled switches, power monitoring, and experiments with Raspberry Pi and ESP8266. Demos include wireless home automation and an Android-controlled remote car.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-7",
+      "title": "Mall Scout",
+      "text": "Mall-navigation and parking prototype with offers, shared discounts, and QR-code gamification. Source: https://github.com/manoj-mathivanan/Mall-Scout",
+      "keywords": "project repository source demo Mall Scout Mall-navigation and parking prototype with offers, shared discounts, and QR-code gamification.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-8",
+      "title": "School Bus Tracking",
+      "text": "An earlier personal project. Browse the repository for its implementation. Source: https://github.com/manoj-mathivanan/SchoolBusTracking",
+      "keywords": "project repository source demo School Bus Tracking An earlier personal project. Browse the repository for its implementation.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-9",
+      "title": "Mobile app experiments",
+      "text": "Earlier StatusApp, Poke-App, and phone-to-phone notification projects, collected here with their original repositories. StatusApp: https://github.com/manoj-mathivanan/StatusApp. Poke-App: https://github.com/manoj-mathivanan/Poke-App. Phone notifications: https://github.com/manoj-mathivanan/Phone-TO-Phone-notification",
+      "keywords": "project repository source demo Mobile app experiments Earlier StatusApp, Poke-App, and phone-to-phone notification projects, collected here with their original repositories.",
+      "url": "/#projects"
     },
     {
       "id": "education-0",
@@ -52,27 +164,41 @@
     },
     {
       "id": "recognition-0",
+      "title": "7 peer recognitions",
+      "text": "Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026.",
+      "keywords": "award awards achievement recognition accomplishment contribution 7 peer recognitions Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "recognition-1",
+      "title": "Architecture and team delivery",
+      "text": "Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026.",
+      "keywords": "award awards achievement recognition accomplishment contribution Architecture and team delivery Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026.",
+      "url": "/#recognition-title"
+    },
+    {
+      "id": "recognition-2",
       "title": "3 Catalyst awards",
       "text": "Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
       "keywords": "award awards achievement recognition accomplishment contribution 3 Catalyst awards Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
       "url": "/#recognition-title"
     },
     {
-      "id": "recognition-1",
+      "id": "recognition-3",
       "title": "Building beyond the brief",
       "text": "Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
       "keywords": "award awards achievement recognition accomplishment contribution Building beyond the brief Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
       "url": "/#recognition-title"
     },
     {
-      "id": "recognition-2",
+      "id": "recognition-4",
       "title": "Technology with a purpose",
       "text": "One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
       "keywords": "award awards achievement recognition accomplishment contribution Technology with a purpose One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
       "url": "/#recognition-title"
     },
     {
-      "id": "recognition-3",
+      "id": "recognition-5",
       "title": "Ideas become shared work",
       "text": "Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
       "keywords": "award awards achievement recognition accomplishment contribution Ideas become shared work Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
@@ -109,7 +235,7 @@
     {
       "id": "homepage",
       "title": "Personal homepage",
-      "text": "The interactive resume at https://manojmathivanan.com is built with HTML, CSS, and JavaScript. It has an expandable career timeline, skills by category, selected innovations, light and dark themes, and a printable resume. Its independent repository is https://github.com/manoj-mathivanan/website_home. It shares the existing VPS with Trader while keeping its own source, static files, and deployment.",
+      "text": "The interactive resume at https://manojmathivanan.com is built with HTML, CSS, and JavaScript. It has an expandable career timeline, skills by category, selected innovations, light and dark themes, and a dedicated one-page resume at /resume/ with a downloadable PDF. Its independent repository is https://github.com/manoj-mathivanan/website_home. It shares the existing VPS with Trader while keeping its own source, static files, and deployment.",
       "keywords": "website homepage home resume portfolio github repository hosting domain html css javascript",
       "url": "https://github.com/manoj-mathivanan/website_home"
     },

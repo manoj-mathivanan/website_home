@@ -14,7 +14,7 @@ def tokens(text):
 def answer(question, previous_question=''):
     lower = question.lower().strip()
     if re.fullmatch(r'(hi|hello|hey|thanks|thank you)[!. ]*', lower):
-        return {'text': 'Hello! Ask me about Manoj’s experience, skills, education, or projects. Career details are from his February 2024 resume.', 'sources': []}
+        return {'text': 'Hello! Ask me about Manoj’s experience, skills, education, or projects. Career details are documented through October 2026.', 'sources': []}
     # These requests cannot become general-purpose instructions, even when they mention Manoj.
     if re.search(r'ignore|system prompt|previous instructions|roleplay|act as|write (?:a |an )?(?:poem|essay|code)|investment advice|buy stocks|password|secret|other (?:chat|conversation)|salary|wife|children|married|date of birth', lower):
         return {'text': REFUSAL, 'sources': []}

@@ -12,6 +12,7 @@ const types = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".svg": "image/svg+xml",
+  ".pdf": "application/pdf",
 };
 const server = createServer(async (request, response) => {
   try {
@@ -60,14 +61,22 @@ const server = createServer(async (request, response) => {
       path === "/" ||
       path === "/index.html" ||
       path === "/favicon.svg" ||
+      path === "/resume" || path === "/resume/" || path === "/resume/index.html" ||
+      path === "/downloads/Manoj-Mathivanan-Resume.pdf" ||
       /^\/src\/[a-zA-Z0-9_.-]+\.(js|css)$/.test(path);
     if (!allowed) {
       response.writeHead(404);
       response.end("Not found");
       return;
     }
-    const asset =
-      !built && path === "/favicon.svg" ? "/public/favicon.svg" : path;
+    if (path === "/resume") {
+      response.writeHead(301, { Location: "/resume/" });
+      response.end();
+      return;
+    }
+    const normalized = path === "/resume/" ? "/resume/index.html" : path;
+    const isPublic = normalized === "/favicon.svg" || normalized.startsWith('/resume/') || normalized.startsWith('/downloads/');
+    const asset = !built && isPublic ? `/public${normalized}` : normalized;
     const file = resolve(
       publicRoot,
       `.${asset === "/" ? "/index.html" : asset}`,

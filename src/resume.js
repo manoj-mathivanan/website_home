@@ -1,21 +1,36 @@
-// Historical source: Manoj_Resume_Feb2024.docx. Update these facts with the next resume.
+// Public, curated facts. Provenance and date decisions: content-notes.md.
 export const resume = {
-  snapshot: "February 2024",
+  snapshot: "October 2026",
+  highlights: [
+    { year: "2026", value: "3 days → <15 min", title: "Kafka as infrastructure as code", text: "Architected production Kafka on GKE with Strimzi, Helm, and Harness CI/CD, replacing manual provisioning with a reviewed, automated deployment pipeline." },
+    { year: "2023", value: "~$35k / month", title: "Lower cloud infrastructure cost", text: "Redesigned the Kafka QA platform and benchmarked VM configurations, reducing monthly cost from about $39,000 to $4,000 and cluster installation from hours to five minutes." },
+    { year: "2025–2026", value: "2 hours → <2 min", title: "AI-assisted Kafka operations", text: "Built a Kafka MCP server and extended it into Slack-based troubleshooting. Estimated issue data collection and analysis time; not an average measured across incidents." },
+    { year: "2026", value: "1 gateway IP", title: "Scalable cloud connectivity", text: "Designed an autoscaling SNI-routing gateway per GKE cluster, replacing per-broker IP exposure while preserving end-to-end mTLS. Designed highly available cluster discovery." },
+    { year: "2024–2025", value: "VMs → containers", title: "Modernized Kafka replication", text: "Led the redesign and deployment of MirrorMaker 2 on a Kubernetes-based platform, with secure cross-environment replication, monitoring, and UI-based management." },
+    { year: "2026 · BUILT & TESTED", value: "Zero-restart design", title: "Kafka cluster switching", text: "Built and tested client re-bootstrap: producers switched in about 1–2 seconds and consumers in 5–10 seconds with no message loss in three test scenarios. Client rollout had not started in the October summary." },
+  ],
   experience: [
     {
       company: "PayPal",
       location: "Chennai, India",
-      period: "2021 — 2024 snapshot",
-      role: "MTS 2 · Lead Software Architect",
-      note: "February 2021 – ongoing as of the February 2024 resume",
-      summary: "Scalable messaging and streaming for PayPal products.",
+      period: "2021 — 2026 snapshot",
+      role: "Staff Software Engineer · Kafka Platform",
+      note: "February 2021 – documented through October 2026; Staff title recorded in the 2025 review",
+      summary: "Technical leadership across Kafka architecture, cloud modernization, reliability, and AI-assisted operations.",
       details: [
-        "Technical lead for a highly scalable messaging and streaming platform serving PayPal products.",
-        "Transformed deployment and maintenance using containers and Ansible playbooks.",
-        "Designed and developed disaster recovery for the messaging platform, increasing availability to 99.99%.",
+        "2026: Architected and delivered production Kafka on GKE using Strimzi, Helm, and Harness. Defined clusters, topics, ACLs, and configuration as code, with validation, rollback, and audit trails. Cut provisioning from about three days to under 15 minutes.",
+        "2026: Designed and built an autoscaling SNI-routing gateway with one entry IP per GKE cluster and end-to-end mTLS; designed highly available discovery and co-authored a cloud migration strategy accepted by the Cloud Architecture Forum.",
+        "2026: Built and tested automatic client re-bootstrap for cluster moves without application restarts. Producer switching took about 1–2 seconds and consumer switching 5–10 seconds in tests, with no message loss in three scenarios. Client rollout remained pending in October 2026.",
+        "2025–2026: Designed and deployed the Kafka MCP server, then extended its tools and integrated Slack-based troubleshooting. Estimated data collection and analysis fell from at least two hours to under two minutes; the 2026 bot handled 10 customer issues and 50+ internal queries.",
+        "2024–2025: Led the redesign and deployment of MirrorMaker 2 from VM-based replication to a Kubernetes-based platform; integrated authentication, observability, management UIs, and secure production-to-sandbox mirroring.",
+        "2024: Led a phased SASL security rollout with no user impact reported in the review, and completed migration of Kafka observability from SignalFx to Datadog using Micrometer.",
+        "2025: Contributed an Apache Kafka performance-testing fix for large payload files (KAFKA-18115, PR #18391), merged into the upstream project in May 2025.",
+        "2023: Rebuilt the Kafka QA platform with Terraform, Ansible, Docker, and Puppet. Reduced monthly infrastructure cost from about $39,000 to $4,000 and cluster installation from hours to five minutes, with production-aligned test environments.",
+        "2021–2022: Led Kafka infrastructure and disaster-recovery setup for the China payments environment; built partition-aware failover automation, cross-region metadata synchronization, and container-aware patching. Migrated the cluster metadata repository without downtime or data loss.",
+        "2025–2026: Automated fleet upgrades and change workflows, mentored engineers, led design reviews and sprint planning, and covered interim team management in 2025. In 2026, planned and groomed 351 stories for five engineers; about 80% were closed at the summary date.",
       ],
-      tags: ["Distributed systems", "Messaging", "Disaster recovery"],
-      impact: { value: "99.99%", label: "platform availability" },
+      tags: ["Kafka", "GKE", "Platform architecture", "MCP", "Technical leadership"],
+      impact: { value: "<15 min", label: "cluster provisioning · 2026" },
     },
     {
       company: "SAP Labs",
@@ -27,6 +42,7 @@ export const resume = {
       details: [
         "Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol.",
         "Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding.",
+        "Built a multi-tenant enterprise backend-as-a-service application using Java, Node.js, and SAP UI5 to provision databases, deploy models, and expose REST services with minimal application code.",
         "Created a framework for end-to-end REST service testing with record and playback support.",
         "Shared knowledge with the developer community through talks and workshops at SAP Tech Hub.",
         "In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes.",
@@ -48,6 +64,16 @@ export const resume = {
     },
   ],
   skills: [
+    { name: "Kubernetes / GKE", category: "Systems & cloud" },
+    { name: "Strimzi", category: "Systems & cloud" },
+    { name: "MirrorMaker 2 / Kafka Connect", category: "Systems & cloud" },
+    { name: "mTLS / SASL", category: "Systems & cloud" },
+    { name: "MCP & AI tooling", category: "Development" },
+    { name: "Python", category: "Development" },
+    { name: "Node.js / REST / OData", category: "Development" },
+    { name: "Terraform", category: "Automation" },
+    { name: "Helm / Harness CI/CD", category: "Automation" },
+    { name: "Datadog / OpenTelemetry", category: "Automation" },
     { name: "Kafka", category: "Systems & cloud" },
     { name: "Messaging & streaming", category: "Systems & cloud" },
     { name: "Google Cloud Platform", category: "Systems & cloud" },
@@ -94,6 +120,8 @@ export const resume = {
     },
   ],
   recognition: [
+    { label: "PAYPAL · 2026", title: "7 peer recognitions", text: "Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026." },
+    { label: "LEADERSHIP · 2025–2026", title: "Architecture and team delivery", text: "Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026." },
     {
       label: "RECOGNITION",
       title: "3 Catalyst awards",
@@ -131,4 +159,47 @@ export const resume = {
         "Built a video-mining tool that extracts frames, recognizes text with OCR, and tags videos to make their contents searchable.",
     },
   ],
+};
+
+// Repositories with minimal READMEs are deliberately described without inferred features.
+export const projects = [
+  { title: "Apache Kafka contribution", category: "OPEN SOURCE · MERGED MAY 2025", description: "Fixed large-payload file loading in Kafka's producer performance tool, avoiding NegativeArraySizeException during load tests. The fix was merged into the upstream project.", links: [{ label: "Merged contribution", url: "https://github.com/apache/kafka/pull/18391" }] },
+  { title: "Trader", category: "MARKET RESEARCH", description: "Python research, backtesting, and paper-trading workflows with frozen experiment inputs and persistent paper portfolios.", links: [{ label: "Open project", url: "https://trader.manojmathivanan.com" }, { label: "Source", url: "https://github.com/manoj-mathivanan/trader_all" }] },
+  { title: "Kafka bootstrap diagnostics", category: "DEVELOPER TOOLING", description: "Java / Spring Boot HTTP request-inspection service for bootstrap diagnostics. A development prototype; broker forwarding is listed as future work in its README.", links: [{ label: "Source", url: "https://github.com/manoj-mathivanan/kafka-bootstrap-proxy" }] },
+  { title: "Warehouse robot", category: "ROBOTICS", description: "Raspberry Pi warehouse automation prototype that receives an order and location from an app, retrieves the item, and brings it to a dispatch point.", links: [{ label: "Source", url: "https://github.com/manoj-mathivanan/warehouse-robot" }, { label: "Watch demo", url: "https://youtu.be/aI32BWp6zB4" }] },
+  { title: "Smart water bottle", category: "CONNECTED DEVICES", description: "Raspberry Pi proof of concept that tracks water consumption, sends drinking reminders, and motivates teams with a leaderboard. Smart Bottle and Smart Health Index placed second at SAP's IoT Chef hackathon.", links: [] },
+  { title: "Smart helmet", category: "CONNECTED DEVICES", description: "Prototype combining two-way Bluetooth audio with an Android app for navigation, music, and call handling through voice interaction.", links: [{ label: "Source", url: "https://github.com/manoj-mathivanan/smart-helmet" }] },
+  { title: "Home automation & Raspberry Pi", category: "HARDWARE EXPLORATIONS", description: "Mobile-controlled switches, power monitoring, and experiments with Raspberry Pi and ESP8266. Demos include wireless home automation and an Android-controlled remote car.", links: [{ label: "Raspberry Pi source", url: "https://github.com/manoj-mathivanan/RaspberryPi" }, { label: "ESP8266 source", url: "https://github.com/manoj-mathivanan/ESP8266" }, { label: "Home automation demo", url: "https://youtu.be/WkdBBF2dDrw" }, { label: "Remote car demo", url: "https://youtu.be/HdcvcBxZMno" }] },
+  { title: "Mall Scout", category: "MOBILE APPS", description: "Mall-navigation and parking prototype with offers, shared discounts, and QR-code gamification.", links: [{ label: "Source", url: "https://github.com/manoj-mathivanan/Mall-Scout" }] },
+  { title: "School Bus Tracking", category: "PROJECT ARCHIVE", description: "An earlier personal project. Browse the repository for its implementation.", links: [{ label: "Source", url: "https://github.com/manoj-mathivanan/SchoolBusTracking" }] },
+  { title: "Mobile app experiments", category: "PROJECT ARCHIVE", description: "Earlier StatusApp, Poke-App, and phone-to-phone notification projects, collected here with their original repositories.", links: [{ label: "StatusApp", url: "https://github.com/manoj-mathivanan/StatusApp" }, { label: "Poke-App", url: "https://github.com/manoj-mathivanan/Poke-App" }, { label: "Phone notifications", url: "https://github.com/manoj-mathivanan/Phone-TO-Phone-notification" }] },
+];
+
+// Shared content for the static resume page and downloadable PDF.
+export const onePage = {
+  name: "Manoj Mathivanan",
+  title: "Staff Software Engineer | Distributed Systems & Kafka Platforms",
+  summary: "Software architect and technical lead building distributed messaging platforms, cloud infrastructure, and developer frameworks. Experience across PayPal, SAP Labs, and Infosys, with a focus on reliability, automation, and practical AI tooling.",
+  skills: "Kafka, Kafka Connect, MirrorMaker 2, Java, Python, GCP, Kubernetes/GKE, Strimzi, Terraform, Helm, Docker, Ansible, Harness CI/CD, mTLS/SASL, Datadog, OpenTelemetry, MCP, REST/OData",
+  jobs: [
+    { company: "PayPal", role: "Staff Software Engineer / Kafka Platform", period: "Feb 2021 - Oct 2026 snapshot", bullets: [
+      "Architected production Kafka on GKE with Strimzi, Helm, and Harness; automated infrastructure and configuration as code, cutting cluster provisioning from about 3 days to under 15 minutes (2026).",
+      "Redesigned Kafka QA infrastructure using Terraform, Ansible, and Docker; reduced monthly cost from about $39,000 to $4,000 and cluster installation from hours to 5 minutes (2023).",
+      "Designed an autoscaling SNI gateway using one IP per GKE cluster with end-to-end mTLS, highly available discovery, and an architecture-forum-approved cloud migration strategy (2026).",
+      "Built the Kafka MCP server and extended it into Slack troubleshooting; estimated issue data collection and analysis fell from at least 2 hours to under 2 minutes (2025-2026).",
+      "Led MirrorMaker 2 migration from VMs to a Kubernetes-based platform, secure cross-environment replication, SASL adoption, and Datadog observability modernization (2024-2025).",
+      "Contributed Apache Kafka's large-payload performance-test fix (KAFKA-18115, PR #18391), merged upstream in May 2025.",
+      "Built and tested restart-free Kafka cluster switching: producers 1-2 s, consumers 5-10 s, no message loss in three test scenarios; client rollout pending as of October 2026.",
+      "Led architecture reviews, mentoring, and delivery planning for five engineers; covered interim management in 2025 and planned/groomed 351 stories in 2026. Earlier work included regional Kafka setup and automated disaster recovery.",
+    ] },
+    { company: "SAP Labs India", role: "Associate Development Architect", period: "Mar 2012 - Feb 2021", bullets: [
+      "Developed Java frameworks for CDS/OData services, a multi-tenant enterprise backend-as-a-service application, and REST record/playback testing; collaborated with the research team in Germany.",
+      "Automated mobile-platform performance tests from 2 hours to 10 minutes. Built a student-data analysis system for three educational institutes in Uganda and an internal crowdsourcing platform.",
+    ] },
+    { company: "Infosys", role: "Quality Engineer", period: "Jun 2011 - Mar 2012", bullets: ["Tested Citizens Bank's BIC teller application and developed comprehensive test coverage."] },
+  ],
+  projectText: "Trader: Python market research, backtesting, and paper trading. Kafka bootstrap diagnostics: Java/Spring Boot prototype. IoT: warehouse robot, smart water bottle with reminders and leaderboard, smart helmet, and home automation.",
+  educationText: "M.Tech, Software Systems - Birla Institute of Technology, Pilani (2017). B.Tech, Computer Science - Amrita University, Coimbatore (2011).",
+  recognitionText: "3 SAP Catalyst awards (top 5% for three consecutive years); SAP Innovation Week winner (2014, 2016, 2018); SAP d-code Demo Jam finalist (2014); 7 PayPal peer recognitions in 2026.",
+  footnote: "Career snapshot: October 2026. Staff title documented in 2025. Earlier dates follow the February 2024 resume.",
 };

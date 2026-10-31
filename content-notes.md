@@ -1,0 +1,27 @@
+# Career content maintenance
+
+The public homepage and one-page resume are curated from owner-provided resumes and PayPal impact summaries. They are not independent employment verification. Source documents remain private and are not copied to public assets or committed. Update `src/resume.js` for content, regenerate the PDF, and build the website.
+
+## Sources and decisions
+
+- February 2024 DOCX and matching PDF: baseline employment dates, education, SAP recognition, and earlier career details.
+- Earlier `Manoj_resume.pdf` and `Manoj_resume_Oct.doc`: expanded SAP backend-as-a-service, IoT, robotics, and mobile project descriptions. The legacy DOC body was recovered as text and cross-checked with the older PDF. No new employment dates were inferred from it.
+- 2021 and 2022 impact summaries: China-region Kafka setup, containerization, metadata migration, disaster recovery, and infrastructure automation.
+- 2023 summary: QA platform redesign; employee account reports monthly costs of $39,000 to $4,000 and installation from hours to five minutes. Manager corroborates approximately $40,000 to under $4,000. Public copy uses approximate $39,000 to $4,000; $35,000 monthly savings is arithmetic, not an additional savings stream.
+- 2024 summary: SASL adoption, SignalFx-to-Datadog migration, Kafka Connect/MM2 design and implementation. Do not present a projected operational improvement as an achieved percentage.
+- 2025 summary: Staff Software Engineer title, MM2 platform migration, MCP server, cloud architecture, interim management. Fleet-upgrade counts differ between employee and manager accounts (3,000+ vs over half of 4,100+); public copy deliberately omits a personal upgrade count. Unqualified maintenance/reliability percentages were omitted.
+- 2026 text summary dated October 31: production Kafka on GKE, provisioning of about three days to under 15 minutes, SNI gateway, discovery, approved migration strategy, MCP/Slack integration, mentoring and delivery. The two-hour to under-two-minute analysis improvement is an estimate, not an incident average. Client re-bootstrap is built/tested, with no message loss in three test scenarios; client rollout had not started. Self-service onboarding planned for 2027 is not described as delivered. The 351 stories are created/groomed for the team, not all personally implemented or completed.
+
+PayPal is shown as February 2021 through the October 2026 documented snapshot; no unsupported “present” end date. Staff is the title documented in 2025; no promotion date is inferred. Previous MTS labels in older reviews are historical titles.
+
+Infosys starts in June 2011 and the M.Tech year is 2017 per the February 2024 baseline. Older resumes instead say September 2011 and 2015–2016; these conflicts need owner confirmation before changing the baseline. Omit stale total-experience counts, expired visas, pending-patent status, and private contact details.
+
+## Public project references
+
+Apache Kafka PR #18391 (KAFKA-18115) was verified through GitHub metadata as authored by `manoj-mathivanan` and merged May 8, 2025. Public copy describes the large-file performance-test fix, not a broader platform performance claim.
+
+All eleven supplied GitHub repositories were resolved and their READMEs checked on November 1, 2026. Detailed descriptions use those READMEs, the previous resumes, or the owner's smart-bottle description. Repositories with title-only READMEs retain modest archive descriptions. `kafka-bootstrap-proxy` currently describes HTTP request inspection and lists broker forwarding as future work; do not advertise it as a working Kafka protocol proxy.
+
+The three unique supplied video IDs were checked by page title: `aI32BWp6zB4` is warehouse automation; `WkdBBF2dDrw` is wireless home automation; `HdcvcBxZMno` is an Android-controlled remote car. The repeated home-automation video is included once. None is presented as a smart-bottle demo.
+
+Original internal URLs, employee IDs, colleague names, incident IDs, review ratings, and award point totals are excluded from published content. Hosting and domain settings are unchanged.

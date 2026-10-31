@@ -1,0 +1,28 @@
+:root { color-scheme: light; font-family: Arial, sans-serif; color: #202b29; background: #eeeee6; }
+* { box-sizing: border-box; }
+body { margin: 0; font-size: 10pt; line-height: 1.38; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #b75233; outline-offset: 4px; }
+nav { max-width: 210mm; margin: 28px auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 12px; font-size: 14px; }
+.download { background: #202b29; color: white; padding: 13px 20px; border-radius: 4px; text-decoration: none; }
+main { max-width: 210mm; margin: 0 auto 48px; padding: 12mm 14mm; background: #fff; box-shadow: 0 4px 30px #202b2910; }
+.eyebrow { font-size: 8pt; letter-spacing: 1.2px; color: #626b66; margin: 0 0 7px; }
+h1 { font-size: 25pt; letter-spacing: -1px; line-height: 1.1; margin: 0 0 6px; }
+.role { font-size: 11pt; font-weight: bold; margin: 0 0 8px; }
+.contact { color: #505955; font-size: 9pt; }
+h2 { text-transform: uppercase; font-size: 9pt; letter-spacing: 1.3px; margin: 13px 0 5px; color: #914329; }
+h3 { margin: 0; font-size: 10pt; }
+p { margin: 0 0 6px; }
+.summary { margin-top: 14px; }
+.job-heading { display: flex; justify-content: space-between; gap: 12px; margin-top: 9px; }
+.job-heading span { font-size: 8.5pt; color: #505955; }
+.job-role { font-size: 9pt; margin: 1px 0 4px; font-weight: bold; }
+ul { padding-left: 15px; margin: 0; }
+li { padding-left: 2px; margin-bottom: 4px; }
+.footnote { font-size: 8pt; color: #626b66; margin-top: 14px; }
+.project-source { font-size: 9pt; }
+.skip-link { position: absolute; top: -100px; left: 10px; padding: 10px; background: white; }
+.skip-link:focus { top: 0; }
+@media(max-width: 650px) { main { padding: 24px; margin-bottom: 0; } nav { margin: 16px 8px; font-size: 12px; } .download { padding: 12px; } h1 { font-size: 24pt; } .job-heading { flex-direction: column; gap: 2px; } }
+@page { size: A4; margin: 10mm; }
+@media print { :root { background: white; } nav,.skip-link { display: none; } main { box-shadow: none; padding: 0; margin: 0; max-width: none; } body { font-size: 9pt; line-height: 1.28; } h2 { margin-top: 10px; } li { margin-bottom: 3px; } a { text-decoration: none; } .footnote { margin-top: 9px; } article { break-inside: avoid; } }

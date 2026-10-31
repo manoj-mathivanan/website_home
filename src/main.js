@@ -1,4 +1,4 @@
-import { resume } from "./resume.js";
+import { resume, projects } from "./resume.js";
 
 const escape = (value) =>
   String(value).replace(
@@ -10,6 +10,13 @@ const escape = (value) =>
   );
 const tags = (values) =>
   values.map((tag) => `<span class="tag">${escape(tag)}</span>`).join("");
+
+document.querySelector("#impact-list").innerHTML = resume.highlights.map(item =>
+  `<article class="impact-card"><p class="eyebrow">${escape(item.year)}</p><strong>${escape(item.value)}</strong><h3>${escape(item.title)}</h3><p>${escape(item.text)}</p></article>`
+).join("");
+document.querySelector("#project-list").innerHTML = projects.map(item =>
+  `<article class="innovation"><p class="eyebrow">${escape(item.category)}</p><h3>${escape(item.title)}</h3><p>${escape(item.description)}</p><div class="project-links">${item.links.map(link => `<a href="${escape(link.url)}" target="_blank" rel="noopener noreferrer">${escape(link.label)} <span aria-hidden="true">↗</span><span class="sr-only"> for ${escape(item.title)}</span></a>`).join("")}</div></article>`
+).join("");
 
 document.querySelector("#experience-list").innerHTML = resume.experience
   .map(
@@ -99,9 +106,6 @@ themeButton.addEventListener("click", () => {
 });
 updateThemeButton();
 
-document
-  .querySelector("#print-resume")
-  .addEventListener("click", () => window.print());
 // Print the complete resume even when a visitor collapsed jobs or filtered skills.
 let printState;
 window.addEventListener("beforeprint", () => {

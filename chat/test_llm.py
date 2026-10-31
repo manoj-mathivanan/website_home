@@ -17,7 +17,7 @@ class ModelAdapterTests(unittest.TestCase):
         self.assertEqual(payload['max_output_tokens'],600)
         self.assertNotIn('visitor@example.com',json.dumps(payload['input']))
         self.assertNotIn('98765',json.dumps(payload['input']))
-        self.assertIn('February 2024',payload['instructions'])
+        self.assertIn('October 2026',payload['instructions'])
         self.assertEqual(result['sources'][0]['url'],'https://trader.manojmathivanan.com')
         self.assertTrue(payload['text']['format']['strict'])
 
