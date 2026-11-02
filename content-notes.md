@@ -4,6 +4,9 @@ The public homepage and one-page resume are curated from owner-provided resumes 
 
 ## Sources and decisions
 
+- November 2, 2026 owner corrections: M.Tech dates are 2015–2017; Infosys Quality Engineer starts June 2011; PayPal location is Chennai. Owner confirmed the Slack-triggered PayPal agentic AI project uses LangGraph, Claude, MCP, and RAG to answer queries. It is included in experience, projects, skills, and the one-page resume. Trader stays on the website and is deliberately excluded from LinkedIn updates.
+- LinkedIn profile reviewed November 2, 2026: IITM Pravartak Executive Certification in Advanced Data Science and Applications, issued January 2025; SAP role progression; Infosys SNMP internship; VSO Uganda social sabbatical; drone, context sharing, Smart Health Index, food-menu app, remote car, video lecture tagging, Poke, and helmet projects. Older projects are presented as prototypes or archives without inferring end dates or ongoing status. Early SAP assignments and Infosys internship dates overlap in the LinkedIn record and are preserved without resolving that overlap by guesswork.
+
 - February 2024 DOCX and matching PDF: baseline employment dates, education, SAP recognition, and earlier career details.
 - Earlier `Manoj_resume.pdf` and `Manoj_resume_Oct.doc`: expanded SAP backend-as-a-service, IoT, robotics, and mobile project descriptions. The legacy DOC body was recovered as text and cross-checked with the older PDF. No new employment dates were inferred from it.
 - 2021 and 2022 impact summaries: China-region Kafka setup, containerization, metadata migration, disaster recovery, and infrastructure automation.

@@ -11,28 +11,35 @@
     {
       "id": "career-0",
       "title": "PayPal experience",
-      "text": "Staff Software Engineer · Kafka Platform at PayPal. February 2021 – documented through October 2026; Staff title recorded in the 2025 review. Technical leadership across Kafka architecture, cloud modernization, reliability, and AI-assisted operations. 2026: Architected and delivered production Kafka on GKE using Strimzi, Helm, and Harness. Defined clusters, topics, ACLs, and configuration as code, with validation, rollback, and audit trails. Cut provisioning from about three days to under 15 minutes. 2026: Designed and built an autoscaling SNI-routing gateway with one entry IP per GKE cluster and end-to-end mTLS; designed highly available discovery and co-authored a cloud migration strategy accepted by the Cloud Architecture Forum. 2026: Built and tested automatic client re-bootstrap for cluster moves without application restarts. Producer switching took about 1–2 seconds and consumer switching 5–10 seconds in tests, with no message loss in three scenarios. Client rollout remained pending in October 2026. 2025–2026: Designed and deployed the Kafka MCP server, then extended its tools and integrated Slack-based troubleshooting. Estimated data collection and analysis fell from at least two hours to under two minutes; the 2026 bot handled 10 customer issues and 50+ internal queries. 2024–2025: Led the redesign and deployment of MirrorMaker 2 from VM-based replication to a Kubernetes-based platform; integrated authentication, observability, management UIs, and secure production-to-sandbox mirroring. 2024: Led a phased SASL security rollout with no user impact reported in the review, and completed migration of Kafka observability from SignalFx to Datadog using Micrometer. 2025: Contributed an Apache Kafka performance-testing fix for large payload files (KAFKA-18115, PR #18391), merged into the upstream project in May 2025. 2023: Rebuilt the Kafka QA platform with Terraform, Ansible, Docker, and Puppet. Reduced monthly infrastructure cost from about $39,000 to $4,000 and cluster installation from hours to five minutes, with production-aligned test environments. 2021–2022: Led Kafka infrastructure and disaster-recovery setup for the China payments environment; built partition-aware failover automation, cross-region metadata synchronization, and container-aware patching. Migrated the cluster metadata repository without downtime or data loss. 2025–2026: Automated fleet upgrades and change workflows, mentored engineers, led design reviews and sprint planning, and covered interim team management in 2025. In 2026, planned and groomed 351 stories for five engineers; about 80% were closed at the summary date. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
+      "text": "Staff Software Engineer · Kafka Platform at PayPal. February 2021 – documented through October 2026 · Member of Technical Staff 1, then Member of Technical Staff 2 / Staff Software Engineer. Technical leadership across Kafka architecture, cloud modernization, reliability, and AI-assisted operations. 2026: Architected and delivered production Kafka on GKE using Strimzi, Helm, and Harness. Defined clusters, topics, ACLs, and configuration as code, with validation, rollback, and audit trails. Cut provisioning from about three days to under 15 minutes. 2026: Designed and built an autoscaling SNI-routing gateway with one entry IP per GKE cluster and end-to-end mTLS; designed highly available discovery and co-authored a cloud migration strategy accepted by the Cloud Architecture Forum. 2026: Built and tested automatic client re-bootstrap for cluster moves without application restarts. Producer switching took about 1–2 seconds and consumer switching 5–10 seconds in tests, with no message loss in three scenarios. Client rollout remained pending in October 2026. 2025–2026: Designed and deployed the Kafka MCP server, then extended its tools and integrated Slack-based troubleshooting. Built a Slack-triggered agentic AI assistant using LangGraph and Claude, combining MCP tools with retrieval-augmented generation (RAG) to answer queries and support Kafka troubleshooting. Estimated data collection and analysis fell from at least two hours to under two minutes; the 2026 bot handled 10 customer issues and 50+ internal queries. 2024–2025: Led the redesign and deployment of MirrorMaker 2 from VM-based replication to a Kubernetes-based platform; integrated authentication, observability, management UIs, and secure production-to-sandbox mirroring. 2024: Led a phased SASL security rollout with no user impact reported in the review, and completed migration of Kafka observability from SignalFx to Datadog using Micrometer. 2025: Contributed an Apache Kafka performance-testing fix for large payload files (KAFKA-18115, PR #18391), merged into the upstream project in May 2025. 2023: Rebuilt the Kafka QA platform with Terraform, Ansible, Docker, and Puppet. Reduced monthly infrastructure cost from about $39,000 to $4,000 and cluster installation from hours to five minutes, with production-aligned test environments. 2021–2022: Led Kafka infrastructure and disaster-recovery setup for the China payments environment; built partition-aware failover automation, cross-region metadata synchronization, and container-aware patching. Migrated the cluster metadata repository without downtime or data loss. 2025–2026: Automated fleet upgrades and change workflows, mentored engineers, led design reviews and sprint planning, and covered interim team management in 2025. In 2026, planned and groomed 351 stories for five engineers; about 80% were closed at the summary date. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
       "keywords": "PayPal Staff Software Engineer · Kafka Platform Kafka GKE Platform architecture MCP Technical leadership experience work career job employment current latest availability",
       "url": "/#experience"
     },
     {
       "id": "career-1",
       "title": "SAP Labs experience",
-      "text": "Associate Development Architect at SAP Labs. March 2012 – February 2021. Cloud frameworks, data services, and developer tools. Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol. Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding. Built a multi-tenant enterprise backend-as-a-service application using Java, Node.js, and SAP UI5 to provision databases, deploy models, and expose REST services with minimal application code. Created a framework for end-to-end REST service testing with record and playback support. Shared knowledge with the developer community through talks and workshops at SAP Tech Hub. In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
+      "text": "Associate Development Architect at SAP Labs. March 2012 – February 2021. Cloud frameworks, data services, and developer tools. Role progression: Quality Associate – Performance (March 2012–October 2014); Developer (August 2013–October 2014 and November 2014–March 2016); Senior Developer (March 2016–March 2019); Associate Development Architect (March 2019–February 2021). Worked with a research team in Germany on database-independent Core Data Services (CDS) modeling and exposure through the OData protocol. Developed a Java annotation-based extension framework that let SAP cloud developers expose HANA databases as OData services with minimal coding. Built a multi-tenant enterprise backend-as-a-service application using Java, Node.js, and SAP UI5 to provision databases, deploy models, and expose REST services with minimal application code. Created a framework for end-to-end REST service testing with record and playback support. Shared knowledge with the developer community through talks and workshops at SAP Tech Hub. In a performance engineering role, built mobile test apps for Android, iOS, and BlackBerry and used Introscope to capture performance results. Automated tests reduced a two-hour workflow to ten minutes. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
       "keywords": "SAP Labs Associate Development Architect Java OData Developer frameworks Performance experience work career job employment ",
       "url": "/#experience"
     },
     {
       "id": "career-2",
+      "title": "VSO · SAP Social Sabbatical experience",
+      "text": "Solutions Architect at VSO · SAP Social Sabbatical. October–November 2018 · social sabbatical during SAP employment. Student information management for vocational education. Worked with three partner educational institutes in Uganda to develop a student information management system, translating operational needs into a working solution during a one-month social sabbatical. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
+      "keywords": "VSO · SAP Social Sabbatical Solutions Architect Solution architecture Education Social impact experience work career job employment ",
+      "url": "/#experience"
+    },
+    {
+      "id": "career-3",
       "title": "Infosys experience",
-      "text": "Quality Engineer at Infosys. June 2011 – March 2012. A foundation in software quality and banking applications. Wrote comprehensive tests and tested the BIC teller application for Citizens Bank. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
+      "text": "Quality Engineer at Infosys. June 2011 – March 2012. A foundation in software quality and banking applications. Wrote comprehensive tests and tested the BIC teller application for Citizens Bank. Internship (February–October 2011): developed an application to perform SNMP walks on network devices and simulate multiple devices of the same type. These curated facts combine earlier resumes and 2021–2026 impact summaries; career cutoff is October 2026.",
       "keywords": "Infosys Quality Engineer Quality engineering Application testing experience work career job employment ",
       "url": "/#experience"
     },
     {
       "id": "skills",
       "title": "Skills",
-      "text": "The published career material lists: Kubernetes / GKE, Strimzi, MirrorMaker 2 / Kafka Connect, mTLS / SASL, MCP & AI tooling, Python, Node.js / REST / OData, Terraform, Helm / Harness CI/CD, Datadog / OpenTelemetry, Kafka, Messaging & streaming, Google Cloud Platform, Software architecture, Java, Spring Boot, Tomcat, Jetty, Agile planning & execution, Docker, Ansible, Puppet, Shell scripting, Git, Jenkins, Maven, Raspberry Pi, Arduino. No proficiency scores are assigned.",
+      "text": "The published career material lists: Agentic AI, LangGraph, Claude LLM, Retrieval-augmented generation (RAG), Slack integrations, Data science / Artificial intelligence, Android development, C / C++, SQL / MySQL / PL/SQL, MongoDB / NoSQL, SAP HANA / CDS, R, JavaScript / HTML, Performance testing / LoadRunner, Linux / Networking, Kubernetes / GKE, Strimzi, MirrorMaker 2 / Kafka Connect, mTLS / SASL, MCP & AI tooling, Python, Node.js / REST / OData, Terraform, Helm / Harness CI/CD, Datadog / OpenTelemetry, Kafka, Messaging & streaming, Google Cloud Platform, Software architecture, Java, Spring Boot, Tomcat, Jetty, Agile planning & execution, Docker, Ansible, Puppet, Shell scripting, Git, Jenkins, Maven, Raspberry Pi, Arduino. No proficiency scores are assigned.",
       "keywords": "skill skills technology technologies toolkit tech stack programming language languages java kafka cloud docker ansible",
       "url": "/#skills"
     },
@@ -80,69 +87,125 @@
     },
     {
       "id": "project-0",
+      "title": "Slack-triggered agentic AI assistant",
+      "text": "Built an agentic AI project triggered from Slack, using LangGraph and Claude with MCP tools and retrieval-augmented generation (RAG) to answer queries and support Kafka troubleshooting. ",
+      "keywords": "project repository source demo Slack-triggered agentic AI assistant Built an agentic AI project triggered from Slack, using LangGraph and Claude with MCP tools and retrieval-augmented generation (RAG) to answer queries and support Kafka troubleshooting.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-1",
+      "title": "Following drone",
+      "text": "Programmed a Drone 2.0 prototype to receive GPS coordinates from a mobile phone and follow its user. ",
+      "keywords": "project repository source demo Following drone Programmed a Drone 2.0 prototype to receive GPS coordinates from a mobile phone and follow its user.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-2",
+      "title": "Poke Android app",
+      "text": "An earlier Android app experiment, archived with its source repository. Source: https://github.com/manoj-mathivanan/Poke-App",
+      "keywords": "project repository source demo Poke Android app An earlier Android app experiment, archived with its source repository.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-3",
+      "title": "Context sharing app",
+      "text": "Android prototype that shares activity and availability states such as running, sleeping, driving, meetings, silent mode, and do-not-disturb to help callers understand availability. Includes manual status updates. ",
+      "keywords": "project repository source demo Context sharing app Android prototype that shares activity and availability states such as running, sleeping, driving, meetings, silent mode, and do-not-disturb to help callers understand availability. Includes manual status updates.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-4",
+      "title": "Smart Health Index",
+      "text": "Prototype that combines everyday activity and sensor inputs, including sleep, steps, heart rate, and smoking detection, into a health index out of ten. Smart Health Index and Smart Bottle placed second in SAP's IoT Chef hackathon in 2015. ",
+      "keywords": "project repository source demo Smart Health Index Prototype that combines everyday activity and sensor inputs, including sleep, steps, heart rate, and smoking detection, into a health index out of ten. Smart Health Index and Smart Bottle placed second in SAP's IoT Chef hackathon in 2015.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-5",
+      "title": "SAP food-menu app",
+      "text": "Android app that checked for updates and displayed the daily SAP company food menu, first listed in June 2014. ",
+      "keywords": "project repository source demo SAP food-menu app Android app that checked for updates and displayed the daily SAP company food menu, first listed in June 2014.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-6",
+      "title": "Mobile-controlled car",
+      "text": "Node.js and GPIO prototype for remotely controlling a Raspberry Pi car, with wireless camera and fire-sensor experiments. Watch demo: https://youtu.be/HdcvcBxZMno",
+      "keywords": "project repository source demo Mobile-controlled car Node.js and GPIO prototype for remotely controlling a Raspberry Pi car, with wireless camera and fire-sensor experiments.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-7",
+      "title": "Video lecture segmentation and tagging",
+      "text": "Built a video-mining tool to search for and within video lectures and jump to topics, using OCR and frame analysis with Tesseract, GOCR, and OpenCV. ",
+      "keywords": "project repository source demo Video lecture segmentation and tagging Built a video-mining tool to search for and within video lectures and jump to topics, using OCR and frame analysis with Tesseract, GOCR, and OpenCV.",
+      "url": "/#projects"
+    },
+    {
+      "id": "project-8",
       "title": "Apache Kafka contribution",
       "text": "Fixed large-payload file loading in Kafka's producer performance tool, avoiding NegativeArraySizeException during load tests. The fix was merged into the upstream project. Merged contribution: https://github.com/apache/kafka/pull/18391",
       "keywords": "project repository source demo Apache Kafka contribution Fixed large-payload file loading in Kafka's producer performance tool, avoiding NegativeArraySizeException during load tests. The fix was merged into the upstream project.",
       "url": "/#projects"
     },
     {
-      "id": "project-1",
+      "id": "project-9",
       "title": "Trader",
       "text": "Python research, backtesting, and paper-trading workflows with frozen experiment inputs and persistent paper portfolios. Open project: https://trader.manojmathivanan.com. Source: https://github.com/manoj-mathivanan/trader_all",
       "keywords": "project repository source demo Trader Python research, backtesting, and paper-trading workflows with frozen experiment inputs and persistent paper portfolios.",
       "url": "/#projects"
     },
     {
-      "id": "project-2",
+      "id": "project-10",
       "title": "Kafka bootstrap diagnostics",
       "text": "Java / Spring Boot HTTP request-inspection service for bootstrap diagnostics. A development prototype; broker forwarding is listed as future work in its README. Source: https://github.com/manoj-mathivanan/kafka-bootstrap-proxy",
       "keywords": "project repository source demo Kafka bootstrap diagnostics Java / Spring Boot HTTP request-inspection service for bootstrap diagnostics. A development prototype; broker forwarding is listed as future work in its README.",
       "url": "/#projects"
     },
     {
-      "id": "project-3",
+      "id": "project-11",
       "title": "Warehouse robot",
       "text": "Raspberry Pi warehouse automation prototype that receives an order and location from an app, retrieves the item, and brings it to a dispatch point. Source: https://github.com/manoj-mathivanan/warehouse-robot. Watch demo: https://youtu.be/aI32BWp6zB4",
       "keywords": "project repository source demo Warehouse robot Raspberry Pi warehouse automation prototype that receives an order and location from an app, retrieves the item, and brings it to a dispatch point.",
       "url": "/#projects"
     },
     {
-      "id": "project-4",
+      "id": "project-12",
       "title": "Smart water bottle",
       "text": "Raspberry Pi proof of concept that tracks water consumption, sends drinking reminders, and motivates teams with a leaderboard. Smart Bottle and Smart Health Index placed second at SAP's IoT Chef hackathon. ",
       "keywords": "project repository source demo Smart water bottle Raspberry Pi proof of concept that tracks water consumption, sends drinking reminders, and motivates teams with a leaderboard. Smart Bottle and Smart Health Index placed second at SAP's IoT Chef hackathon.",
       "url": "/#projects"
     },
     {
-      "id": "project-5",
+      "id": "project-13",
       "title": "Smart helmet",
       "text": "Prototype combining two-way Bluetooth audio with an Android app for navigation, music, and call handling through voice interaction. Source: https://github.com/manoj-mathivanan/smart-helmet",
       "keywords": "project repository source demo Smart helmet Prototype combining two-way Bluetooth audio with an Android app for navigation, music, and call handling through voice interaction.",
       "url": "/#projects"
     },
     {
-      "id": "project-6",
+      "id": "project-14",
       "title": "Home automation & Raspberry Pi",
       "text": "Mobile-controlled switches, power monitoring, and experiments with Raspberry Pi and ESP8266. Demos include wireless home automation and an Android-controlled remote car. Raspberry Pi source: https://github.com/manoj-mathivanan/RaspberryPi. ESP8266 source: https://github.com/manoj-mathivanan/ESP8266. Home automation demo: https://youtu.be/WkdBBF2dDrw. Remote car demo: https://youtu.be/HdcvcBxZMno",
       "keywords": "project repository source demo Home automation & Raspberry Pi Mobile-controlled switches, power monitoring, and experiments with Raspberry Pi and ESP8266. Demos include wireless home automation and an Android-controlled remote car.",
       "url": "/#projects"
     },
     {
-      "id": "project-7",
+      "id": "project-15",
       "title": "Mall Scout",
       "text": "Mall-navigation and parking prototype with offers, shared discounts, and QR-code gamification. Source: https://github.com/manoj-mathivanan/Mall-Scout",
       "keywords": "project repository source demo Mall Scout Mall-navigation and parking prototype with offers, shared discounts, and QR-code gamification.",
       "url": "/#projects"
     },
     {
-      "id": "project-8",
+      "id": "project-16",
       "title": "School Bus Tracking",
       "text": "An earlier personal project. Browse the repository for its implementation. Source: https://github.com/manoj-mathivanan/SchoolBusTracking",
       "keywords": "project repository source demo School Bus Tracking An earlier personal project. Browse the repository for its implementation.",
       "url": "/#projects"
     },
     {
-      "id": "project-9",
+      "id": "project-17",
       "title": "Mobile app experiments",
       "text": "Earlier StatusApp, Poke-App, and phone-to-phone notification projects, collected here with their original repositories. StatusApp: https://github.com/manoj-mathivanan/StatusApp. Poke-App: https://github.com/manoj-mathivanan/Poke-App. Phone notifications: https://github.com/manoj-mathivanan/Phone-TO-Phone-notification",
       "keywords": "project repository source demo Mobile app experiments Earlier StatusApp, Poke-App, and phone-to-phone notification projects, collected here with their original repositories.",
@@ -150,13 +213,20 @@
     },
     {
       "id": "education-0",
-      "title": "M.Tech · Software Systems",
-      "text": "M.Tech · Software Systems, Birla Institute of Technology, Pilani, 2017. Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
-      "keywords": "education degree studied university college school qualification Birla Institute of Technology, Pilani M.Tech · Software Systems Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
+      "title": "Executive Certification · Advanced Data Science and Applications",
+      "text": "Executive Certification · Advanced Data Science and Applications, IITM Pravartak Technologies Foundation, Issued January 2025. Advanced data science and artificial intelligence applications.",
+      "keywords": "education degree studied university college school qualification IITM Pravartak Technologies Foundation Executive Certification · Advanced Data Science and Applications Advanced data science and artificial intelligence applications.",
       "url": "/#education-title"
     },
     {
       "id": "education-1",
+      "title": "M.Tech · Software Systems",
+      "text": "M.Tech · Software Systems, Birla Institute of Technology, Pilani, 2015–2017. Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
+      "keywords": "education degree studied university college school qualification Birla Institute of Technology, Pilani M.Tech · Software Systems Designed a specification to represent MongoDB as an OData service, with an implementation demonstrated in Java.",
+      "url": "/#education-title"
+    },
+    {
+      "id": "education-2",
       "title": "B.Tech · Computer Science",
       "text": "B.Tech · Computer Science, Amrita University, Coimbatore, 2011. Built a video-mining tool that extracts frames, recognizes text with OCR, and tags videos to make their contents searchable.",
       "keywords": "education degree studied university college school qualification Amrita University, Coimbatore B.Tech · Computer Science Built a video-mining tool that extracts frames, recognizes text with OCR, and tags videos to make their contents searchable.",
