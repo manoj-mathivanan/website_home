@@ -1,5 +1,43 @@
 import { skills } from "./skills.js?v=20261102-skills";
 
+export const peerRecognitions2026 = [
+  {
+    date: "2 February 2026",
+    title: "Cyber-5 platform performance",
+    text: "Shared team recognition for the late-2025 Cyber-5 period: zero production incidents while the platform processed 20.35 trillion messages per day, with a peak of 327 million messages per second. These are platform-wide team results.",
+  },
+  {
+    date: "30 March 2026",
+    title: "Incident ownership and service restoration",
+    text: "Recognized for stepping in over a weekend while not on call, helping a customer resolve a Kafka consumer-lag monitoring incident and restore service in about 2 hours 15 minutes.",
+  },
+  {
+    date: "31 March 2026",
+    title: "Google Cloud Summit India · Terraform track",
+    text: "Peer recognition for winning the Terraform track at Google Cloud Summit India, celebrating cloud infrastructure skills and participation in the engineering community.",
+  },
+  {
+    date: "19 May 2026",
+    title: "Kernel vulnerability patching",
+    text: "Recognized for contributing to fleet-wide kernel security patching. The team patched 62 Kafka clusters ahead of the deadline without disrupting production traffic.",
+  },
+  {
+    date: "30 June 2026",
+    title: "Kafka cloud migration architecture",
+    text: "Recognized for the co-authored Kafka cloud migration architecture decision record accepted by the Cloud Architecture Forum. The strategy evaluated cutover alternatives and was designed to avoid application code changes and coordinated restarts; client rollout was still pending in October 2026.",
+  },
+  {
+    date: "5 October 2026",
+    title: "Incident RCA guidance and mentoring",
+    text: "Shared recognition for technical guidance during incident root cause analysis and support, helping teammates investigate problems and build confidence in production troubleshooting.",
+  },
+  {
+    date: "16 October 2026",
+    title: "Cross-team collaboration and delivery",
+    text: "Shared team recognition for ownership, collaboration, unblocking partner teams, and carefully executing platform migrations. Related work included Kafka cloud connectivity, discovery, and technical support for engineers delivering the platform.",
+  },
+];
+
 // Public, curated facts. Provenance and date decisions: content-notes.md.
 export const resume = {
   snapshot: "October 2026",
@@ -105,7 +143,7 @@ export const resume = {
     },
   ],
   recognition: [
-    { label: "PAYPAL · 2026", title: "7 peer recognitions", text: "Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026." },
+    { label: "PAYPAL · 2026", title: "7 peer recognitions · Kafka platform engineering", text: "Seven recognitions received between February and October 2026, covering individual contributions and shared platform outcomes.", details: peerRecognitions2026 },
     { label: "LEADERSHIP · 2025–2026", title: "Architecture and team delivery", text: "Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026." },
     {
       label: "RECOGNITION",

@@ -234,44 +234,44 @@
     },
     {
       "id": "recognition-0",
-      "title": "7 peer recognitions",
-      "text": "Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026.",
-      "keywords": "award awards achievement recognition accomplishment contribution 7 peer recognitions Recognized for cloud migration architecture, incident support, mentoring, security patching, and platform performance. Google Cloud Summit India Terraform track winner, March 2026.",
+      "title": "7 peer recognitions · Kafka platform engineering",
+      "text": "Seven recognitions received between February and October 2026, covering individual contributions and shared platform outcomes. 2 February 2026: Cyber-5 platform performance. Shared team recognition for the late-2025 Cyber-5 period: zero production incidents while the platform processed 20.35 trillion messages per day, with a peak of 327 million messages per second. These are platform-wide team results. 30 March 2026: Incident ownership and service restoration. Recognized for stepping in over a weekend while not on call, helping a customer resolve a Kafka consumer-lag monitoring incident and restore service in about 2 hours 15 minutes. 31 March 2026: Google Cloud Summit India · Terraform track. Peer recognition for winning the Terraform track at Google Cloud Summit India, celebrating cloud infrastructure skills and participation in the engineering community. 19 May 2026: Kernel vulnerability patching. Recognized for contributing to fleet-wide kernel security patching. The team patched 62 Kafka clusters ahead of the deadline without disrupting production traffic. 30 June 2026: Kafka cloud migration architecture. Recognized for the co-authored Kafka cloud migration architecture decision record accepted by the Cloud Architecture Forum. The strategy evaluated cutover alternatives and was designed to avoid application code changes and coordinated restarts; client rollout was still pending in October 2026. 5 October 2026: Incident RCA guidance and mentoring. Shared recognition for technical guidance during incident root cause analysis and support, helping teammates investigate problems and build confidence in production troubleshooting. 16 October 2026: Cross-team collaboration and delivery. Shared team recognition for ownership, collaboration, unblocking partner teams, and carefully executing platform migrations. Related work included Kafka cloud connectivity, discovery, and technical support for engineers delivering the platform.",
+      "keywords": "award awards achievement recognition accomplishment contribution 7 peer recognitions · Kafka platform engineering Seven recognitions received between February and October 2026, covering individual contributions and shared platform outcomes. Cyber-5 platform performance Incident ownership and service restoration Google Cloud Summit India · Terraform track Kernel vulnerability patching Kafka cloud migration architecture Incident RCA guidance and mentoring Cross-team collaboration and delivery",
       "url": "/#recognition-title"
     },
     {
       "id": "recognition-1",
       "title": "Architecture and team delivery",
       "text": "Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026.",
-      "keywords": "award awards achievement recognition accomplishment contribution Architecture and team delivery Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026.",
+      "keywords": "award awards achievement recognition accomplishment contribution Architecture and team delivery Cloud Architecture Forum approvals for Kafka cloud architecture and migration strategy; interim team management in 2025 and technical guidance for five engineers in 2026. ",
       "url": "/#recognition-title"
     },
     {
       "id": "recognition-2",
       "title": "3 Catalyst awards",
       "text": "Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
-      "keywords": "award awards achievement recognition accomplishment contribution 3 Catalyst awards Ranked among the top 5% of SAP employees worldwide for three consecutive years.",
+      "keywords": "award awards achievement recognition accomplishment contribution 3 Catalyst awards Ranked among the top 5% of SAP employees worldwide for three consecutive years. ",
       "url": "/#recognition-title"
     },
     {
       "id": "recognition-3",
       "title": "Building beyond the brief",
       "text": "Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
-      "keywords": "award awards achievement recognition accomplishment contribution Building beyond the brief Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi.",
+      "keywords": "award awards achievement recognition accomplishment contribution Building beyond the brief Innovation Week winner in 2014, 2016, and 2018. SAP d-code 2014 Demo Jam finalist for mobile automation using Raspberry Pi. ",
       "url": "/#recognition-title"
     },
     {
       "id": "recognition-4",
       "title": "Technology with a purpose",
       "text": "One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
-      "keywords": "award awards achievement recognition accomplishment contribution Technology with a purpose One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes.",
+      "keywords": "award awards achievement recognition accomplishment contribution Technology with a purpose One of 12 people selected globally at SAP Labs for a CSR program in Hoima, Uganda. Built a student-data analysis system in one month for three educational institutes. ",
       "url": "/#recognition-title"
     },
     {
       "id": "recognition-5",
       "title": "Ideas become shared work",
       "text": "Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
-      "keywords": "award awards achievement recognition accomplishment contribution Ideas become shared work Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto.",
+      "keywords": "award awards achievement recognition accomplishment contribution Ideas become shared work Worked with the MD of SAP Labs India on an internal crowdsourcing platform connecting developers with idea owners. Received a company-sponsored fellowship in Palo Alto. ",
       "url": "/#recognition-title"
     },
     {

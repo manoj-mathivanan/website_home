@@ -1,4 +1,4 @@
-import { resume, projects } from "./resume.js?v=20261102-skills";
+import { resume, projects } from "./resume.js?v=20261102-recognition";
 
 const escape = (value) =>
   String(value).replace(
@@ -71,7 +71,7 @@ document.querySelector("#innovations-list").innerHTML = resume.innovations
 document.querySelector("#recognition-list").innerHTML = resume.recognition
   .map(
     (item) =>
-      `<article><p class="eyebrow">${escape(item.label)}</p><h3>${escape(item.title)}</h3><p>${escape(item.text)}</p></article>`,
+      `<article${item.details ? ' class="recognition-detailed"' : ""}><p class="eyebrow">${escape(item.label)}</p><h3>${escape(item.title)}</h3><p>${escape(item.text)}</p>${item.details ? `<ol class="recognition-details">${item.details.map(detail => `<li><p class="eyebrow">${escape(detail.date)}</p><h4>${escape(detail.title)}</h4><p>${escape(detail.text)}</p></li>`).join("")}</ol>` : ""}</article>`,
   )
   .join("");
 document.querySelector("#education-list").innerHTML = resume.education

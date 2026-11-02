@@ -47,8 +47,8 @@ const facts = [
   ...resume.recognition.map((item, i) => ({
     id: `recognition-${i}`,
     title: item.title,
-    text: item.text,
-    keywords: `award awards achievement recognition accomplishment contribution ${item.title} ${item.text}`,
+    text: `${item.text}${item.details ? " " + item.details.map(detail => `${detail.date}: ${detail.title}. ${detail.text}`).join(" ") : ""}`,
+    keywords: `award awards achievement recognition accomplishment contribution ${item.title} ${item.text} ${(item.details || []).map(detail => detail.title).join(" ")}`,
     url: "/#recognition-title",
   })),
   ...resume.innovations.map((item, i) => ({

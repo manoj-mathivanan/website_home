@@ -683,6 +683,41 @@ h3 {
 .recognition-grid h3 {
   margin: 9px 0 9px;
 }
+.recognition-detailed {
+  grid-column: 1 / -1;
+}
+.recognition-grid .recognition-detailed > p:last-of-type {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.recognition-details {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 40px;
+}
+.recognition-details li {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  break-inside: avoid;
+}
+.recognition-details h4 {
+  font: 600 1rem/1.4 var(--display);
+  margin: 8px 0;
+}
+.recognition-details li > p:last-child {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .recognition-details {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
 .education-section {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
