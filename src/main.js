@@ -1,4 +1,4 @@
-import { resume, projects } from "./resume.js";
+import { resume, projects } from "./resume.js?v=20261102-skills";
 
 const escape = (value) =>
   String(value).replace(

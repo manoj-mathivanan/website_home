@@ -1,4 +1,4 @@
-import { skills } from "./skills.js";
+import { skills } from "./skills.js?v=20261102-skills";
 
 // Public, curated facts. Provenance and date decisions: content-notes.md.
 export const resume = {
